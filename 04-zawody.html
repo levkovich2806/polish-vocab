@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Польская лексика — Профессии (Zawody, Temat IX)</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --line: #c8c8c8;
+    --head: #2b2b2b;
+    --accent: #6d4aff;
+    --zebra: #f4f3fb;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 10.5px;
+    line-height: 1.3;
+  }
+
+  /* ---- A4 landscape print setup ---- */
+  @page {
+    size: A4 landscape;
+    margin: 9mm 10mm;
+  }
+
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--accent);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 13px;
+  }
+  .toolbar a { color: #fff; text-decoration: none; }
+  .toolbar .home { font-weight: 700; white-space: nowrap; }
+  .toolbar .links { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; }
+  .toolbar .links a {
+    padding: 4px 10px;
+    border-radius: 6px;
+    opacity: .85;
+    white-space: nowrap;
+  }
+  .toolbar .links a:hover { background: rgba(255,255,255,.18); opacity: 1; }
+  .toolbar .links a.active { background: #fff; color: var(--accent); opacity: 1; font-weight: 700; }
+  .toolbar button {
+    background: #fff;
+    color: var(--accent);
+    border: none;
+    border-radius: 6px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .toolbar button:hover { background: #efeaff; }
+
+  .wrap { padding: 16px 12px; max-width: 1180px; margin: 0 auto; }
+
+  h1.doc-title {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin: 4px 0 2px;
+  }
+  p.doc-sub {
+    text-align: center;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 11px;
+    color: #555;
+    margin: 0 0 14px;
+  }
+
+  .theme { break-before: page; padding-top: 2px; }
+  .theme:first-of-type { break-before: auto; }
+
+  .theme-head {
+    border-bottom: 2px solid var(--accent);
+    margin: 0 0 8px;
+    padding-bottom: 4px;
+  }
+  .theme-head .temat {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 10px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .theme-head h2 {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 16px;
+    margin: 1px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .theme-head h2 .ru { color: #555; font-weight: 500; font-size: 13px; }
+  .theme-head h2 .pg { color: #999; font-size: 12px; }
+
+  .cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6mm;
+    align-items: flex-start;
+  }
+
+  .col {
+    flex: 1 1 0;
+    min-width: 200px;
+  }
+
+  .block {
+    margin: 0 0 9px;
+  }
+
+  .block h3 {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 11px;
+    margin: 0 0 2px;
+    color: var(--head);
+    border-left: 3px solid var(--accent);
+    padding-left: 6px;
+    break-after: avoid;
+  }
+  .block h3 small { color: #888; font-weight: 400; }
+  .block .note {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 9px;
+    color: #888;
+    margin: 0 0 3px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2px;
+  }
+  td {
+    border: 1px solid var(--line);
+    padding: 2px 5px;
+    vertical-align: top;
+    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+  tr { break-inside: avoid; }
+  td.pl { font-weight: 600; width: 47%; }
+  td.ru { font-size: 10px; }
+  tbody tr:nth-child(even) { background: var(--zebra); }
+
+  @media print {
+    .toolbar { display: none; }
+    .wrap { padding: 0; max-width: none; }
+    body { font-size: 10px; line-height: 1.2; }
+    td { padding: 1px 6px; }
+    td.ru { font-size: 9.7px; }
+    .cols { gap: 5mm; }
+    .col { min-width: 0; }
+    .block { margin-bottom: 7px; }
+    .block h3 { font-size: 11px; margin-bottom: 2px; }
+    h1.doc-title { margin: 0 0 2px; font-size: 16px; }
+    p.doc-sub { margin: 0 0 8px; }
+    .theme-head { margin-bottom: 6px; padding-bottom: 4px; }
+    .theme-head h2 { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a class="home" href="index.html">🏠 Все темы</a>
+  <div class="links">
+    <a href="01-czlowiek-i-wyglad.html">Человек и внешность</a>
+    <a href="02-rodzina-drzewo-rodowe.html">Семья и родственники</a>
+    <a href="03-jedzenie-i-gastronomia.html">Еда и гастрономия</a>
+    <a href="04-zawody.html" class="active">Профессии</a>
+  </div>
+  <button onclick="window.print()">🖨 Печать / PDF</button>
+</div>
+
+<div class="wrap">
+  <h1 class="doc-title">Польская лексика: профессии</h1>
+  <p class="doc-sub">Zawody · Temat IX · оригинал (польский) — перевод (русский)</p>
+
+  <section class="theme">
+    <div class="theme-head">
+      <h2><span>Zawody <span class="ru">— Профессии</span></span></h2>
+    </div>
+    <div class="cols">
+
+    <div class="col">
+      <div class="block">
+        <h3>Руководство и должности <small>— Czy to jest zawód?</small></h3>
+        <p class="note">Должности и звания, а не профессии</p>
+        <table><tbody>
+          <tr><td class="pl">dyrektor</td><td class="ru">директор</td></tr>
+          <tr><td class="pl">gospodarz</td><td class="ru">хозяин</td></tr>
+          <tr><td class="pl">gospodyni</td><td class="ru">хозяйка</td></tr>
+          <tr><td class="pl">kierownik</td><td class="ru">заведующий, руководитель, начальник</td></tr>
+          <tr><td class="pl">prezes</td><td class="ru">председатель</td></tr>
+          <tr><td class="pl">przewodnicząca</td><td class="ru">председатель (ж.)</td></tr>
+          <tr><td class="pl">przewodniczący</td><td class="ru">председатель (м.)</td></tr>
+          <tr><td class="pl">zastępca</td><td class="ru">заместитель</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Медицина и здоровье</h3>
+        <table><tbody>
+          <tr><td class="pl">lekarz</td><td class="ru">врач</td></tr>
+          <tr><td class="pl">dentysta</td><td class="ru">зубной врач (мужчина)</td></tr>
+          <tr><td class="pl">dentystka</td><td class="ru">зубной врач (женщина)</td></tr>
+          <tr><td class="pl">pielęgniarka</td><td class="ru">медсестра</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Образование и наука</h3>
+        <table><tbody>
+          <tr><td class="pl">nauczyciel</td><td class="ru">учитель</td></tr>
+          <tr><td class="pl">nauczycielka</td><td class="ru">учительница</td></tr>
+          <tr><td class="pl">profesor</td><td class="ru">профессор</td></tr>
+          <tr><td class="pl">przedszkolanka</td><td class="ru">воспитательница (детсада)</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Транспорт и связь</h3>
+        <table><tbody>
+          <tr><td class="pl">kierowca</td><td class="ru">водитель</td></tr>
+          <tr><td class="pl">kolejarz</td><td class="ru">железнодорожник</td></tr>
+          <tr><td class="pl">listonosz</td><td class="ru">почтальон</td></tr>
+          <tr><td class="pl">marynarz</td><td class="ru">моряк</td></tr>
+          <tr><td class="pl">taksówkarz</td><td class="ru">таксист</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Государство и политика</h3>
+        <table><tbody>
+          <tr><td class="pl">prezydent</td><td class="ru">президент</td></tr>
+          <tr><td class="pl">minister</td><td class="ru">министр</td></tr>
+          <tr><td class="pl">polityk</td><td class="ru">политик</td></tr>
+          <tr><td class="pl">dyplomata</td><td class="ru">дипломат</td></tr>
+          <tr><td class="pl">urzędnik</td><td class="ru">служащий</td></tr>
+          <tr><td class="pl">urzędniczka</td><td class="ru">служащая</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>Торговля и обслуживание</h3>
+        <table><tbody>
+          <tr><td class="pl">sprzedawca</td><td class="ru">продавец</td></tr>
+          <tr><td class="pl">sprzedawczyni, ekspedientka</td><td class="ru">продавщица</td></tr>
+          <tr><td class="pl">kelner</td><td class="ru">официант</td></tr>
+          <tr><td class="pl">portier</td><td class="ru">портье, швейцар</td></tr>
+          <tr><td class="pl">fryzjerka</td><td class="ru">парикмахерша</td></tr>
+          <tr><td class="pl">krawiec</td><td class="ru">портной</td></tr>
+          <tr><td class="pl">krawcowa</td><td class="ru">портниха</td></tr>
+          <tr><td class="pl">szewc</td><td class="ru">сапожник</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Кухня и быт</h3>
+        <table><tbody>
+          <tr><td class="pl">kucharz</td><td class="ru">повар</td></tr>
+          <tr><td class="pl">kucharka</td><td class="ru">повариха</td></tr>
+          <tr><td class="pl">sprzątaczka</td><td class="ru">уборщица</td></tr>
+          <tr><td class="pl">gospodyni domowa</td><td class="ru">домохозяйка</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Силовые структуры и право</h3>
+        <table><tbody>
+          <tr><td class="pl">policjant</td><td class="ru">полицейский</td></tr>
+          <tr><td class="pl">żołnierz</td><td class="ru">солдат</td></tr>
+          <tr><td class="pl">wojskowy</td><td class="ru">военный</td></tr>
+          <tr><td class="pl">strażak</td><td class="ru">пожарный</td></tr>
+          <tr><td class="pl">prawnik</td><td class="ru">юрист</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Искусство и медиа</h3>
+        <table><tbody>
+          <tr><td class="pl">aktor</td><td class="ru">актёр</td></tr>
+          <tr><td class="pl">artysta</td><td class="ru">артист; художник</td></tr>
+          <tr><td class="pl">malarz</td><td class="ru">маляр; художник</td></tr>
+          <tr><td class="pl">tancerz</td><td class="ru">танцор</td></tr>
+          <tr><td class="pl">reżyser</td><td class="ru">режиссёр</td></tr>
+          <tr><td class="pl">fotograf</td><td class="ru">фотограф</td></tr>
+          <tr><td class="pl">pisarz</td><td class="ru">писатель</td></tr>
+          <tr><td class="pl">dziennikarz</td><td class="ru">журналист</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>Строительство и ремёсла</h3>
+        <table><tbody>
+          <tr><td class="pl">murarz</td><td class="ru">каменщик</td></tr>
+          <tr><td class="pl">stolarz</td><td class="ru">столяр</td></tr>
+          <tr><td class="pl">elektryk</td><td class="ru">электрик</td></tr>
+          <tr><td class="pl">hydraulik</td><td class="ru">сантехник</td></tr>
+          <tr><td class="pl">ślusarz</td><td class="ru">слесарь</td></tr>
+          <tr><td class="pl">mechanik</td><td class="ru">механик</td></tr>
+          <tr><td class="pl">szklarz</td><td class="ru">стекольщик</td></tr>
+          <tr><td class="pl">monter</td><td class="ru">монтёр, сборщик</td></tr>
+          <tr><td class="pl">frezer</td><td class="ru">фрезеровщик</td></tr>
+          <tr><td class="pl">tokarz</td><td class="ru">токарь</td></tr>
+          <tr><td class="pl">kowal</td><td class="ru">кузнец</td></tr>
+          <tr><td class="pl">piekarz</td><td class="ru">пекарь</td></tr>
+          <tr><td class="pl">rzemieślnik</td><td class="ru">ремесленник</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Промышленность и производство</h3>
+        <table><tbody>
+          <tr><td class="pl">robotnik</td><td class="ru">рабочий</td></tr>
+          <tr><td class="pl">technik</td><td class="ru">техник</td></tr>
+          <tr><td class="pl">inżynier</td><td class="ru">инженер</td></tr>
+          <tr><td class="pl">rzeźnik</td><td class="ru">мясник</td></tr>
+          <tr><td class="pl">drwal</td><td class="ru">лесоруб, дровосек</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Экономика, сельское хозяйство и прочее</h3>
+        <table><tbody>
+          <tr><td class="pl">przedsiębiorca</td><td class="ru">предприниматель</td></tr>
+          <tr><td class="pl">ekonomista</td><td class="ru">экономист</td></tr>
+          <tr><td class="pl">księgowa</td><td class="ru">бухгалтер</td></tr>
+          <tr><td class="pl">sekretarka</td><td class="ru">секретарша</td></tr>
+          <tr><td class="pl">rolnik</td><td class="ru">земледелец, аграрий, фермер</td></tr>
+          <tr><td class="pl">ogrodnik</td><td class="ru">садовник</td></tr>
+          <tr><td class="pl">rybak</td><td class="ru">рыбак</td></tr>
+          <tr><td class="pl">przewodnik</td><td class="ru">экскурсовод, проводник</td></tr>
+          <tr><td class="pl">fachowiec</td><td class="ru">специалист, мастер</td></tr>
+          <tr><td class="pl">złota rączka</td><td class="ru">мастер на все руки</td></tr>
+          <tr><td class="pl">król</td><td class="ru">король</td></tr>
+          <tr><td class="pl">kat</td><td class="ru">палач</td></tr>
+          <tr><td class="pl">żebrak</td><td class="ru">нищий, попрошайка</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+</div>
+</body>
+</html>

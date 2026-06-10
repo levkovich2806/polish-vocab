@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Польская лексика — Семья, родственники (Drzewo rodowe, Temat I)</title>
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --line: #c8c8c8;
+      --head: #2b2b2b;
+      --accent: #6d4aff;
+      --zebra: #f4f3fb;
+      --addbg: #fff7e6;
+      --addaccent: #e08a00;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      color: var(--ink);
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 10.5px;
+      line-height: 1.3;
+    }
+
+    @page {
+      size: A4 landscape;
+      margin: 9mm 10mm;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 8px 16px;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 13px;
+    }
+
+    .toolbar a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .toolbar .home {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .toolbar .links {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+
+    .toolbar .links a {
+      padding: 4px 10px;
+      border-radius: 6px;
+      opacity: .85;
+      white-space: nowrap;
+    }
+
+    .toolbar .links a:hover {
+      background: rgba(255, 255, 255, .18);
+      opacity: 1;
+    }
+
+    .toolbar .links a.active {
+      background: #fff;
+      color: var(--accent);
+      opacity: 1;
+      font-weight: 700;
+    }
+
+    .toolbar button {
+      background: #fff;
+      color: var(--accent);
+      border: none;
+      border-radius: 6px;
+      padding: 7px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .toolbar button:hover {
+      background: #efeaff;
+    }
+
+    .wrap {
+      padding: 16px 12px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    h1.doc-title {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 18px;
+      text-align: center;
+      margin: 4px 0 2px;
+    }
+
+    p.doc-sub {
+      text-align: center;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 11px;
+      color: #555;
+      margin: 0 0 14px;
+    }
+
+    .theme {
+      break-before: auto;
+      padding-top: 2px;
+    }
+
+    .theme+.theme {
+      margin-top: 10px;
+    }
+
+    .theme-head {
+      border-bottom: 2px solid var(--accent);
+      margin: 0 0 8px;
+      padding-bottom: 4px;
+    }
+
+    .theme-head .temat {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 10px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .theme-head h2 {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 16px;
+      margin: 1px 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .theme-head h2 .ru {
+      color: #555;
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    .theme-head h2 .pg {
+      color: #999;
+      font-size: 12px;
+    }
+
+    .cols {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6mm;
+      align-items: flex-start;
+    }
+
+    .block {
+      flex: 1 1 0;
+      min-width: 210px;
+      margin: 0 0 9px;
+    }
+
+    .block h3 {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 11px;
+      margin: 0 0 2px;
+      color: var(--head);
+      border-left: 3px solid var(--accent);
+      padding-left: 6px;
+      break-after: avoid;
+    }
+
+    .block h3 small {
+      color: #888;
+      font-weight: 400;
+    }
+
+    .block .note {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 9px;
+      color: #888;
+      margin: 0 0 3px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2px;
+    }
+
+    td {
+      border: 1px solid var(--line);
+      padding: 2px 5px;
+      vertical-align: top;
+      font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    tr {
+      break-inside: avoid;
+    }
+
+    td.pl {
+      font-weight: 600;
+      width: 44%;
+    }
+
+    td.ru {
+      font-size: 10px;
+    }
+
+    tbody tr:nth-child(even) {
+      background: var(--zebra);
+    }
+
+    /* highlight handwritten additions */
+    .block.add h3 {
+      border-left-color: var(--addaccent);
+      color: #8a5300;
+    }
+
+    .block.add table td {
+      border-color: #f0d9a8;
+    }
+
+    .block.add tbody tr:nth-child(even) {
+      background: var(--addbg);
+    }
+
+    .block.add tbody tr:nth-child(odd) {
+      background: #fffdf7;
+    }
+
+    @media print {
+      .toolbar {
+        display: none;
+      }
+
+      .wrap {
+        padding: 0;
+        max-width: none;
+      }
+
+      body {
+        font-size: 10px;
+        line-height: 1.2;
+      }
+
+      td {
+        padding: 1px 6px;
+      }
+
+      td.ru {
+        font-size: 9.7px;
+      }
+
+      .cols {
+        gap: 6mm;
+      }
+
+      .block {
+        margin-bottom: 7px;
+        min-width: 0;
+      }
+
+      .block h3 {
+        font-size: 11px;
+        margin-bottom: 2px;
+      }
+
+      h1.doc-title {
+        margin: 0 0 2px;
+        font-size: 16px;
+      }
+
+      p.doc-sub {
+        margin: 0 0 8px;
+      }
+
+      .theme-head {
+        margin-bottom: 6px;
+        padding-bottom: 4px;
+      }
+
+      .theme-head h2 {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="toolbar">
+    <a class="home" href="index.html">🏠 Все темы</a>
+    <div class="links">
+      <a href="01-czlowiek-i-wyglad.html">Человек и внешность</a>
+      <a href="02-rodzina-drzewo-rodowe.html" class="active">Семья и родственники</a>
+      <a href="03-jedzenie-i-gastronomia.html">Еда и гастрономия</a>
+      <a href="04-zawody.html">Профессии</a>
+    </div>
+    <button onclick="window.print()">🖨 Печать / PDF</button>
+  </div>
+
+  <div class="wrap">
+    <h1 class="doc-title">Польская лексика: семья и родственники</h1>
+    <p class="doc-sub">Temat I · Drzewo rodowe · оригинал (польский) — перевод (русский)</p>
+
+    <section class="theme">
+      <div class="theme-head">
+        <h2><span>Drzewo rodowe <span class="ru">— Генеалогическое древо (семья)</span></span></h2>
+      </div>
+      <div class="cols">
+
+        <div class="block">
+          <h3>A — Существительные</h3>
+          <table>
+            <tbody>
+              <tr>
+                <td class="pl">rodzina</td>
+                <td class="ru">семья</td>
+              </tr>
+              <tr>
+                <td class="pl">mąż</td>
+                <td class="ru">муж</td>
+              </tr>
+              <tr>
+                <td class="pl">żona</td>
+                <td class="ru">жена</td>
+              </tr>
+              <tr>
+                <td class="pl">rodzice</td>
+                <td class="ru">родители</td>
+              </tr>
+              <tr>
+                <td class="pl">mama</td>
+                <td class="ru">мама</td>
+              </tr>
+              <tr>
+                <td class="pl">tata</td>
+                <td class="ru">папа</td>
+              </tr>
+              <tr>
+                <td class="pl">matka</td>
+                <td class="ru">мать</td>
+              </tr>
+              <tr>
+                <td class="pl">ojciec</td>
+                <td class="ru">отец</td>
+              </tr>
+              <tr>
+                <td class="pl">dzieci</td>
+                <td class="ru">дети</td>
+              </tr>
+              <tr>
+                <td class="pl">dziecko</td>
+                <td class="ru">ребёнок</td>
+              </tr>
+              <tr>
+                <td class="pl">syn</td>
+                <td class="ru">сын</td>
+              </tr>
+              <tr>
+                <td class="pl">córka</td>
+                <td class="ru">дочь</td>
+              </tr>
+              <tr>
+                <td class="pl">rodzeństwo</td>
+                <td class="ru">братья и сёстры (родные)</td>
+              </tr>
+              <tr>
+                <td class="pl">brat</td>
+                <td class="ru">брат</td>
+              </tr>
+              <tr>
+                <td class="pl">siostra</td>
+                <td class="ru">сестра</td>
+              </tr>
+              <tr>
+                <td class="pl">kuzyn</td>
+                <td class="ru">двоюродный брат, кузен</td>
+              </tr>
+              <tr>
+                <td class="pl">dziadkowie</td>
+                <td class="ru">дедушка и бабушка</td>
+              </tr>
+              <tr>
+                <td class="pl">dziadek</td>
+                <td class="ru">дедушка</td>
+              </tr>
+              <tr>
+                <td class="pl">babcia</td>
+                <td class="ru">бабушка</td>
+              </tr>
+              <tr>
+                <td class="pl">wnuk</td>
+                <td class="ru">внук</td>
+              </tr>
+              <tr>
+                <td class="pl">wnuczka</td>
+                <td class="ru">внучка</td>
+              </tr>
+              <tr>
+                <td class="pl">krewny</td>
+                <td class="ru">родственник</td>
+              </tr>
+              <tr>
+                <td class="pl">wujek</td>
+                <td class="ru">дядя (брат матери)</td>
+              </tr>
+              <tr>
+                <td class="pl">ciotka</td>
+                <td class="ru">тётя</td>
+              </tr>
+              <tr>
+                <td class="pl">członek rodziny</td>
+                <td class="ru">член семьи</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="block">
+          <h3>A — Глаголы</h3>
+          <table>
+            <tbody>
+              <tr>
+                <td class="pl">mieć</td>
+                <td class="ru">иметь</td>
+              </tr>
+              <tr>
+                <td class="pl">kochać</td>
+                <td class="ru">любить</td>
+              </tr>
+              <tr>
+                <td class="pl">lubić</td>
+                <td class="ru">нравиться, любить</td>
+              </tr>
+              <tr>
+                <td class="pl">żyć</td>
+                <td class="ru">жить</td>
+              </tr>
+              <tr>
+                <td class="pl">urodzić się</td>
+                <td class="ru">родиться</td>
+              </tr>
+              <tr>
+                <td class="pl">mieszkać</td>
+                <td class="ru">жить, проживать</td>
+              </tr>
+              <tr>
+                <td class="pl">kłócić się</td>
+                <td class="ru">ссориться</td>
+              </tr>
+              <tr>
+                <td class="pl">robić</td>
+                <td class="ru">делать</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 style="margin-top:6px">B — Брак, статус</h3>
+          <table>
+            <tbody>
+              <tr>
+                <td class="pl">małżeństwo</td>
+                <td class="ru">брак, супружество</td>
+              </tr>
+              <tr>
+                <td class="pl">wdowa</td>
+                <td class="ru">вдова</td>
+              </tr>
+              <tr>
+                <td class="pl">zdrowie</td>
+                <td class="ru">здоровье</td>
+              </tr>
+              <tr>
+                <td class="pl">przybrani rodzice</td>
+                <td class="ru">приёмные родители</td>
+              </tr>
+              <tr>
+                <td class="pl">rozwiedziony</td>
+                <td class="ru">разведённый (м.)</td>
+              </tr>
+              <tr>
+                <td class="pl">rozwódka</td>
+                <td class="ru">разведённая (ж.)</td>
+              </tr>
+              <tr>
+                <td class="pl">pokolenie</td>
+                <td class="ru">поколение</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="block">
+          <h3>B — Родственники</h3>
+          <table>
+            <tbody>
+              <tr>
+                <td class="pl">ojczym</td>
+                <td class="ru">отчим</td>
+              </tr>
+              <tr>
+                <td class="pl">macocha</td>
+                <td class="ru">мачеха</td>
+              </tr>
+              <tr>
+                <td class="pl">przybrany syn, pasierb</td>
+                <td class="ru">приёмный сын, пасынок</td>
+              </tr>
+              <tr>
+                <td class="pl">przybrana córka, pasierbica</td>
+                <td class="ru">приёмная дочь, падчерица</td>
+              </tr>
+              <tr>
+                <td class="pl">brat przyrodni</td>
+                <td class="ru">сводный (единокровный) брат</td>
+              </tr>
+              <tr>
+                <td class="pl">siostra przyrodnia</td>
+                <td class="ru">сводная (единокровная) сестра</td>
+              </tr>
+              <tr>
+                <td class="pl">cioteczny brat</td>
+                <td class="ru">двоюродный брат (по тёте)</td>
+              </tr>
+              <tr>
+                <td class="pl">cioteczna siostra</td>
+                <td class="ru">двоюродная сестра (по тёте)</td>
+              </tr>
+              <tr>
+                <td class="pl">babka</td>
+                <td class="ru">бабка</td>
+              </tr>
+              <tr>
+                <td class="pl">prababka</td>
+                <td class="ru">прабабка</td>
+              </tr>
+              <tr>
+                <td class="pl">pradziadek</td>
+                <td class="ru">прадед</td>
+              </tr>
+              <tr>
+                <td class="pl">prawnuk</td>
+                <td class="ru">правнук</td>
+              </tr>
+              <tr>
+                <td class="pl">prawnuczka</td>
+                <td class="ru">правнучка</td>
+              </tr>
+              <tr>
+                <td class="pl">wuj</td>
+                <td class="ru">дядя (брат матери)</td>
+              </tr>
+              <tr>
+                <td class="pl">siostrzeniec</td>
+                <td class="ru">племянник (сын сестры)</td>
+              </tr>
+              <tr>
+                <td class="pl">siostrzenica</td>
+                <td class="ru">племянница (дочь сестры)</td>
+              </tr>
+              <tr>
+                <td class="pl">bratanica</td>
+                <td class="ru">племянница (дочь брата)</td>
+              </tr>
+              <tr>
+                <td class="pl">bratanek</td>
+                <td class="ru">племянник (сын брата)</td>
+              </tr>
+              <tr>
+                <td class="pl">teść</td>
+                <td class="ru">тесть, свёкор</td>
+              </tr>
+              <tr>
+                <td class="pl">teściowa</td>
+                <td class="ru">тёща, свекровь</td>
+              </tr>
+              <tr>
+                <td class="pl">zięć</td>
+                <td class="ru">зять</td>
+              </tr>
+              <tr>
+                <td class="pl">synowa</td>
+                <td class="ru">невестка, сноха</td>
+              </tr>
+              <tr>
+                <td class="pl">daleki kuzyn</td>
+                <td class="ru">дальний родственник</td>
+              </tr>
+              <tr>
+                <td class="pl">bliski krewny</td>
+                <td class="ru">близкий родственник</td>
+              </tr>
+              <tr>
+                <td class="pl">„przyszywany krewny”</td>
+                <td class="ru">названый (неродной) родственник</td>
+              </tr>
+              <tr>
+                <td class="pl">szwagier</td>
+                <td class="ru">шурин, деверь, свояк</td>
+              </tr>
+              <tr>
+                <td class="pl">szwagierka</td>
+                <td class="ru">золовка, свояченица, невестка</td>
+              </tr>
+              <tr>
+                <td class="pl">stryj</td>
+                <td class="ru">дядя (брат отца)</td>
+              </tr>
+              <tr>
+                <td class="pl">stryjenka</td>
+                <td class="ru">тётя (жена брата отца)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="block">
+          <h3>B — Глаголы</h3>
+          <table>
+            <tbody>
+              <tr>
+                <td class="pl">ożenić się z kobietą</td>
+                <td class="ru">жениться на женщине</td>
+              </tr>
+              <tr>
+                <td class="pl">wyjść za mąż</td>
+                <td class="ru">выйти замуж</td>
+              </tr>
+              <tr>
+                <td class="pl">rozwodzić się</td>
+                <td class="ru">разводиться</td>
+              </tr>
+              <tr>
+                <td class="pl">umierać</td>
+                <td class="ru">умирать</td>
+              </tr>
+              <tr>
+                <td class="pl">wychować</td>
+                <td class="ru">воспитать</td>
+              </tr>
+              <tr>
+                <td class="pl">szanować</td>
+                <td class="ru">уважать</td>
+              </tr>
+              <tr>
+                <td class="pl">założyć rodzinę</td>
+                <td class="ru">создать семью</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="block add" style="margin-top:6px">
+            <h3>Дополнительно</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="pl">stan cywilny</td>
+                  <td class="ru">семейное положение</td>
+                </tr>
+                <tr>
+                  <td class="pl">kawaler</td>
+                  <td class="ru">холостяк</td>
+                </tr>
+                <tr>
+                  <td class="pl">panna</td>
+                  <td class="ru">незамужняя (девушка)</td>
+                </tr>
+                <tr>
+                  <td class="pl">mężatka</td>
+                  <td class="ru">замужняя (женщина)</td>
+                </tr>
+                <tr>
+                  <td class="pl">singiel / singielka</td>
+                  <td class="ru">одинокий / одинокая</td>
+                </tr>
+                <tr>
+                  <td class="pl">w związku nieformalnym</td>
+                  <td class="ru">в неформальных отношениях (гражд. брак)</td>
+                </tr>
+                <tr>
+                  <td class="pl">bliźniak / bliźniaczka</td>
+                  <td class="ru">близнец / близняшка</td>
+                </tr>
+                <tr>
+                  <td class="pl">wujeczny brat / siostra</td>
+                  <td class="ru">двоюродный брат/сестра (по линии матери)</td>
+                </tr>
+                <tr>
+                  <td class="pl">stryjeczny brat / siostra</td>
+                  <td class="ru">двоюродный брат/сестра (по линии отца)</td>
+                </tr>
+                <tr>
+                  <td class="pl">wujostwo</td>
+                  <td class="ru">дядя (брат матери) и его жена</td>
+                </tr>
+                <tr>
+                  <td class="pl">stryjostwo</td>
+                  <td class="ru">дядя (брат отца) и его жена</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</body>
+
+</html>

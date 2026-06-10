@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Польская лексика — темы с переводами</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --accent: #6d4aff;
+    --accent2: #8a6bff;
+    --muted: #6b6b78;
+    --card: #ffffff;
+    --bg: #f3f1fb;
+    --line: #e6e2f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+  }
+  header {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #fff;
+    padding: 40px 24px 34px;
+    text-align: center;
+  }
+  header h1 { margin: 0 0 6px; font-size: 30px; }
+  header p { margin: 0; opacity: .92; font-size: 15px; }
+
+  main { max-width: 1040px; margin: 0 auto; padding: 28px 20px 48px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 18px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 20px 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(109,74,255,.16);
+    border-color: var(--accent);
+  }
+  .card .num {
+    align-self: flex-start;
+    background: var(--bg);
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 13px;
+    border-radius: 8px;
+    padding: 3px 10px;
+    margin-bottom: 12px;
+  }
+  .card h2 { margin: 0 0 4px; font-size: 19px; }
+  .card .pl { color: var(--accent); font-style: italic; font-size: 13px; margin: 0 0 10px; }
+  .card .desc { color: var(--muted); font-size: 13.5px; margin: 0 0 14px; flex: 1; }
+  .card .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12.5px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+  }
+  .card .open { color: var(--accent); font-weight: 700; }
+
+  .tip {
+    margin: 26px 0 0;
+    background: #fffdf5;
+    border: 1px solid #f0e3b8;
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 13.5px;
+    color: #6a5a20;
+  }
+  .tip b { color: #4a3f10; }
+
+  footer { text-align: center; color: var(--muted); font-size: 12.5px; padding: 0 20px 30px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Польская лексика с переводами</h1>
+  <p>Карточки по темам · оригинал (польский) — перевод (русский) · готово к печати A4 (альбомная)</p>
+</header>
+
+<main>
+  <div class="grid">
+
+    <a class="card" href="01-czlowiek-i-wyglad.html">
+      <h2>Человек и внешность</h2>
+      <p class="pl">Typy ludzi; Wygląd człowieka</p>
+      <p class="desc">Типы людей, внешние черты, телосложение, лицо, глаза и волосы, причёски.</p>
+      <div class="meta"><span>≈ 2 страницы печати</span><span class="open">Открыть →</span></div>
+    </a>
+
+    <a class="card" href="02-rodzina-drzewo-rodowe.html">
+      <h2>Семья и родственники</h2>
+      <p class="pl">Drzewo rodowe</p>
+      <p class="desc">Генеалогическое древо, родство по линиям, семейное положение + рукописные дополнения.</p>
+      <div class="meta"><span>≈ 1 страница печати</span><span class="open">Открыть →</span></div>
+    </a>
+
+    <a class="card" href="03-jedzenie-i-gastronomia.html">
+      <h2>Еда и гастрономия</h2>
+      <p class="pl">Posiłki, owoce, żywność, karta dań, zakłady</p>
+      <p class="desc">Приёмы пищи и посуда, фрукты и овощи, виды продуктов, меню, заведения общепита.</p>
+      <div class="meta"><span>≈ 5 страниц печати</span><span class="open">Открыть →</span></div>
+    </a>
+
+    <a class="card" href="04-zawody.html">
+      <h2>Профессии</h2>
+      <p class="pl">Zawody; Przedstawiciele różnych zawodów</p>
+      <p class="desc">Профессии и должности, представители разных специальностей.</p>
+      <div class="meta"><span>≈ 1 страница печати</span><span class="open">Открыть →</span></div>
+    </a>
+
+  </div>
+
+  <div class="tip">
+    <b>Печать:</b> откройте нужную тему и нажмите «🖨 Печать / PDF». Навигация и кнопки на печать не попадают.
+    В диалоге печати выберите ориентацию <b>«Альбомная»</b> и снимите галочку <b>«Колонтитулы» / «Headers and footers»</b>,
+    чтобы убрать дату и адрес файла.
+  </div>
+</main>
+
+<footer>Podręcznik języka polskiego · учебные карточки</footer>
+
+</body>
+</html>

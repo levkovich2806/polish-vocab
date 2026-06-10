@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Польская лексика — Еда, напитки, гастрономия (Tematy VIII–IX)</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --line: #c8c8c8;
+    --head: #2b2b2b;
+    --accent: #6d4aff;
+    --zebra: #f4f3fb;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 10.5px;
+    line-height: 1.3;
+  }
+
+  /* ---- A4 landscape print setup ---- */
+  @page {
+    size: A4 landscape;
+    margin: 9mm 10mm;
+  }
+
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--accent);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 13px;
+  }
+  .toolbar a { color: #fff; text-decoration: none; }
+  .toolbar .home { font-weight: 700; white-space: nowrap; }
+  .toolbar .links { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; }
+  .toolbar .links a {
+    padding: 4px 10px;
+    border-radius: 6px;
+    opacity: .85;
+    white-space: nowrap;
+  }
+  .toolbar .links a:hover { background: rgba(255,255,255,.18); opacity: 1; }
+  .toolbar .links a.active { background: #fff; color: var(--accent); opacity: 1; font-weight: 700; }
+  .toolbar button {
+    background: #fff;
+    color: var(--accent);
+    border: none;
+    border-radius: 6px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .toolbar button:hover { background: #efeaff; }
+
+  .wrap { padding: 16px 12px; max-width: 1180px; margin: 0 auto; }
+
+  h1.doc-title {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin: 4px 0 2px;
+  }
+  p.doc-sub {
+    text-align: center;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 11px;
+    color: #555;
+    margin: 0 0 14px;
+  }
+
+  .theme { break-before: page; padding-top: 2px; }
+  .theme:first-of-type { break-before: auto; }
+
+  .theme-head {
+    border-bottom: 2px solid var(--accent);
+    margin: 0 0 8px;
+    padding-bottom: 4px;
+  }
+  .theme-head .temat {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 10px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .theme-head h2 {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 16px;
+    margin: 1px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .theme-head h2 .ru { color: #555; font-weight: 500; font-size: 13px; }
+  .theme-head h2 .pg { color: #999; font-size: 12px; }
+
+  .cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6mm;
+    align-items: flex-start;
+  }
+  .col {
+    flex: 1 1 0;
+    min-width: 220px;
+  }
+
+  .block {
+    margin: 0 0 9px;
+  }
+
+  .block h3 {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 11px;
+    margin: 0 0 2px;
+    color: var(--head);
+    border-left: 3px solid var(--accent);
+    padding-left: 6px;
+    break-after: avoid;
+  }
+  .block h3 small { color: #888; font-weight: 400; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2px;
+  }
+  td {
+    border: 1px solid var(--line);
+    padding: 2px 5px;
+    vertical-align: top;
+    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+  tr { break-inside: avoid; }
+  td.pl { font-weight: 600; width: 47%; }
+  td.ru { font-size: 10px; }
+  tbody tr:nth-child(even) { background: var(--zebra); }
+
+  @media print {
+    .toolbar { display: none; }
+    .wrap { padding: 0; max-width: none; }
+    body { font-size: 10px; line-height: 1.14; }
+    td { padding: 0.4px 6px; }
+    td.ru { font-size: 9.7px; }
+    td.pl { width: 46%; }
+    .cols { gap: 5mm; }
+    .col { min-width: 0; }
+    .block { margin-bottom: 7px; }
+    .block h3 { font-size: 11px; margin-bottom: 2px; }
+    h1.doc-title { margin: 0 0 2px; font-size: 16px; }
+    p.doc-sub { margin: 0 0 8px; }
+    .theme-head { margin-bottom: 6px; padding-bottom: 4px; }
+    .theme-head h2 { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a class="home" href="index.html">🏠 Все темы</a>
+  <div class="links">
+    <a href="01-czlowiek-i-wyglad.html">Человек и внешность</a>
+    <a href="02-rodzina-drzewo-rodowe.html">Семья и родственники</a>
+    <a href="03-jedzenie-i-gastronomia.html" class="active">Еда и гастрономия</a>
+    <a href="04-zawody.html">Профессии</a>
+  </div>
+  <button onclick="window.print()">🖨 Печать / PDF</button>
+</div>
+
+<div class="wrap">
+  <h1 class="doc-title">Польская лексика: еда, напитки и гастрономия</h1>
+  <p class="doc-sub">Tematy VIII–IX · оригинал (польский) — перевод (русский)</p>
+
+  <!-- ============ TEMAT VIII — POSIŁKI, NACZYNIA (25) ============ -->
+  <section class="theme">
+    <div class="theme-head">
+      <h2><span>Posiłki, naczynia <span class="ru">— Приёмы пищи, посуда</span></span></h2>
+    </div>
+    <div class="cols">
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">napój</td><td class="ru">напиток</td></tr>
+          <tr><td class="pl">posiłek</td><td class="ru">приём пищи, трапеза</td></tr>
+          <tr><td class="pl">dieta</td><td class="ru">диета</td></tr>
+          <tr><td class="pl">podwieczorek</td><td class="ru">полдник</td></tr>
+          <tr><td class="pl">przystawka</td><td class="ru">закуска</td></tr>
+          <tr><td class="pl">potrawy jarskie</td><td class="ru">постные/вегетарианские блюда</td></tr>
+          <tr><td class="pl">wyszukane</td><td class="ru">изысканные</td></tr>
+          <tr><td class="pl">talerz (płytki, głęboki, deserowy)</td><td class="ru">тарелка (мелкая, глубокая, десертная)</td></tr>
+          <tr><td class="pl">talerzyk</td><td class="ru">тарелочка</td></tr>
+          <tr><td class="pl">nakrycie</td><td class="ru">столовый прибор, сервировка</td></tr>
+          <tr><td class="pl">sztućce</td><td class="ru">столовые приборы</td></tr>
+          <tr><td class="pl">alkohol</td><td class="ru">алкоголь</td></tr>
+          <tr><td class="pl">cukier (puder, kryształ, w kostkach)</td><td class="ru">сахар (пудра, кристаллический, кусковой)</td></tr>
+          <tr><td class="pl">cukierniczka</td><td class="ru">сахарница</td></tr>
+          <tr><td class="pl">kaszka</td><td class="ru">кашка</td></tr>
+          <tr><td class="pl">serwetki</td><td class="ru">салфетки</td></tr>
+          <tr><td class="pl">obrus</td><td class="ru">скатерть</td></tr>
+          <tr><td class="pl">solniczka</td><td class="ru">солонка</td></tr>
+          <tr><td class="pl">pieprzniczka</td><td class="ru">перечница</td></tr>
+          <tr><td class="pl">przyprawy (pieprz, papryka)</td><td class="ru">приправы (перец, паприка)</td></tr>
+          <tr><td class="pl">miska</td><td class="ru">миска</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>A — Наречия</h3>
+        <table><tbody>
+          <tr><td class="pl">wcześnie</td><td class="ru">рано</td></tr>
+          <tr><td class="pl">późno</td><td class="ru">поздно</td></tr>
+          <tr><td class="pl">często</td><td class="ru">часто</td></tr>
+          <tr><td class="pl">zawsze</td><td class="ru">всегда</td></tr>
+          <tr><td class="pl">nigdy</td><td class="ru">никогда</td></tr>
+          <tr><td class="pl">rano</td><td class="ru">утром</td></tr>
+          <tr><td class="pl">w południe</td><td class="ru">в полдень</td></tr>
+          <tr><td class="pl">po południu</td><td class="ru">после полудня, днём</td></tr>
+          <tr><td class="pl">wieczorem</td><td class="ru">вечером</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">jadać</td><td class="ru">есть (регулярно)</td></tr>
+          <tr><td class="pl">trawić</td><td class="ru">переваривать</td></tr>
+          <tr><td class="pl">stołować się</td><td class="ru">столоваться, питаться</td></tr>
+          <tr><td class="pl">spożywać</td><td class="ru">употреблять в пищу</td></tr>
+          <tr><td class="pl">nakrywać stół (do stołu)</td><td class="ru">накрывать на стол</td></tr>
+          <tr><td class="pl">zmywać naczynia</td><td class="ru">мыть посуду</td></tr>
+          <tr><td class="pl">przyprawiać</td><td class="ru">приправлять</td></tr>
+          <tr><td class="pl">podgrzewać</td><td class="ru">подогревать</td></tr>
+          <tr><td class="pl">parzyć</td><td class="ru">заваривать, обваривать</td></tr>
+          <tr><td class="pl">zaparzać</td><td class="ru">заваривать</td></tr>
+          <tr><td class="pl">wrzeć</td><td class="ru">кипеть</td></tr>
+          <tr><td class="pl">przyrządzać</td><td class="ru">приготавливать</td></tr>
+          <tr><td class="pl">ozdabiać</td><td class="ru">украшать</td></tr>
+          <tr><td class="pl">kroić</td><td class="ru">резать</td></tr>
+          <tr><td class="pl">kosztować</td><td class="ru">пробовать на вкус</td></tr>
+          <tr><td class="pl">smakować</td><td class="ru">быть вкусным; пробовать</td></tr>
+          <tr><td class="pl">smażyć</td><td class="ru">жарить</td></tr>
+          <tr><td class="pl">piec</td><td class="ru">печь</td></tr>
+          <tr><td class="pl">mleć</td><td class="ru">молоть</td></tr>
+          <tr><td class="pl">ucierać</td><td class="ru">растирать</td></tr>
+          <tr><td class="pl">dusić</td><td class="ru">тушить</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">pożywny</td><td class="ru">питательный</td></tr>
+          <tr><td class="pl">lekko/ciężko-strawny</td><td class="ru">легко/тяжело усваиваемый</td></tr>
+          <tr><td class="pl">wrzący</td><td class="ru">кипящий</td></tr>
+          <tr><td class="pl">alkoholowy</td><td class="ru">алкогольный</td></tr>
+          <tr><td class="pl">bezalkoholowy</td><td class="ru">безалкогольный</td></tr>
+          <tr><td class="pl">syty</td><td class="ru">сытный, сытый</td></tr>
+          <tr><td class="pl">suty</td><td class="ru">обильный</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>A — Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">lekki</td><td class="ru">лёгкий</td></tr>
+          <tr><td class="pl">głodny</td><td class="ru">голодный</td></tr>
+          <tr><td class="pl">dobry</td><td class="ru">хороший</td></tr>
+          <tr><td class="pl">smaczny</td><td class="ru">вкусный</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Существительные <small>— продолжение</small></h3>
+        <table><tbody>
+          <tr><td class="pl">sosjerka</td><td class="ru">соусник</td></tr>
+          <tr><td class="pl">półmisek</td><td class="ru">блюдо (для подачи)</td></tr>
+          <tr><td class="pl">waza</td><td class="ru">супница</td></tr>
+          <tr><td class="pl">dzbanek</td><td class="ru">кувшин</td></tr>
+          <tr><td class="pl">flaszka</td><td class="ru">бутыль</td></tr>
+          <tr><td class="pl">karafka</td><td class="ru">графин</td></tr>
+          <tr><td class="pl">pojemnik</td><td class="ru">контейнер</td></tr>
+          <tr><td class="pl">kufel</td><td class="ru">пивная кружка</td></tr>
+          <tr><td class="pl">maselniczka</td><td class="ru">маслёнка</td></tr>
+          <tr><td class="pl">filiżanka</td><td class="ru">чашка</td></tr>
+          <tr><td class="pl">spodek</td><td class="ru">блюдце</td></tr>
+          <tr><td class="pl">rondel</td><td class="ru">сотейник, кастрюля</td></tr>
+          <tr><td class="pl">chochla</td><td class="ru">половник</td></tr>
+          <tr><td class="pl">patelnia</td><td class="ru">сковорода</td></tr>
+          <tr><td class="pl">brytfanna</td><td class="ru">противень, жаровня</td></tr>
+          <tr><td class="pl">ruszt</td><td class="ru">решётка, гриль</td></tr>
+          <tr><td class="pl">naczynia</td><td class="ru">посуда</td></tr>
+          <tr><td class="pl">lodówka</td><td class="ru">холодильник</td></tr>
+          <tr><td class="pl">taca</td><td class="ru">поднос</td></tr>
+          <tr><td class="pl">świeca</td><td class="ru">свеча</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>A — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">przygotować</td><td class="ru">приготовить</td></tr>
+          <tr><td class="pl">jeść</td><td class="ru">есть, кушать</td></tr>
+          <tr><td class="pl">pić</td><td class="ru">пить</td></tr>
+          <tr><td class="pl">gotować</td><td class="ru">варить, готовить</td></tr>
+          <tr><td class="pl">brać</td><td class="ru">брать</td></tr>
+          <tr><td class="pl">sprzątać (ze stołu)</td><td class="ru">убирать (со стола)</td></tr>
+          <tr><td class="pl">przeprosić</td><td class="ru">извиниться</td></tr>
+          <tr><td class="pl">wybierać</td><td class="ru">выбирать</td></tr>
+          <tr><td class="pl">trzymać</td><td class="ru">держать</td></tr>
+          <tr><td class="pl">nabierać</td><td class="ru">набирать, накладывать</td></tr>
+          <tr><td class="pl">nalewać</td><td class="ru">наливать</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>A — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">jedzenie</td><td class="ru">еда</td></tr>
+          <tr><td class="pl">śniadanie</td><td class="ru">завтрак</td></tr>
+          <tr><td class="pl">obiad</td><td class="ru">обед</td></tr>
+          <tr><td class="pl">kolacja</td><td class="ru">ужин</td></tr>
+          <tr><td class="pl">drugie śniadanie</td><td class="ru">второй завтрак</td></tr>
+          <tr><td class="pl">zupa</td><td class="ru">суп</td></tr>
+          <tr><td class="pl">deser</td><td class="ru">десерт</td></tr>
+          <tr><td class="pl">smak</td><td class="ru">вкус</td></tr>
+          <tr><td class="pl">talerz</td><td class="ru">тарелка</td></tr>
+          <tr><td class="pl">garnek</td><td class="ru">кастрюля</td></tr>
+          <tr><td class="pl">kanapka</td><td class="ru">бутерброд</td></tr>
+          <tr><td class="pl">nóż</td><td class="ru">нож</td></tr>
+          <tr><td class="pl">widelec</td><td class="ru">вилка</td></tr>
+          <tr><td class="pl">łyżka</td><td class="ru">ложка</td></tr>
+          <tr><td class="pl">łyżeczka</td><td class="ru">чайная ложка</td></tr>
+          <tr><td class="pl">cukier</td><td class="ru">сахар</td></tr>
+          <tr><td class="pl">sól</td><td class="ru">соль</td></tr>
+          <tr><td class="pl">butelka</td><td class="ru">бутылка</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>A — Существительные <small>— продолжение</small></h3>
+        <table><tbody>
+          <tr><td class="pl">szklanka</td><td class="ru">стакан</td></tr>
+          <tr><td class="pl">kieliszek</td><td class="ru">рюмка</td></tr>
+          <tr><td class="pl">czajnik</td><td class="ru">чайник</td></tr>
+          <tr><td class="pl">wino</td><td class="ru">вино</td></tr>
+          <tr><td class="pl">piwo</td><td class="ru">пиво</td></tr>
+          <tr><td class="pl">wódka</td><td class="ru">водка</td></tr>
+          <tr><td class="pl">herbata</td><td class="ru">чай</td></tr>
+          <tr><td class="pl">kawa</td><td class="ru">кофе</td></tr>
+          <tr><td class="pl">sok</td><td class="ru">сок</td></tr>
+          <tr><td class="pl">mleko</td><td class="ru">молоко</td></tr>
+          <tr><td class="pl">restauracja</td><td class="ru">ресторан</td></tr>
+          <tr><td class="pl">bar</td><td class="ru">бар</td></tr>
+          <tr><td class="pl">wybór</td><td class="ru">выбор</td></tr>
+          <tr><td class="pl">koszyk</td><td class="ru">корзина</td></tr>
+          <tr><td class="pl">kubek</td><td class="ru">кружка</td></tr>
+          <tr><td class="pl">potrawa</td><td class="ru">блюдо (кушанье)</td></tr>
+          <tr><td class="pl">lód</td><td class="ru">лёд</td></tr>
+          <tr><td class="pl">czekolada</td><td class="ru">шоколад</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+  <!-- ============ TEMAT VIII — OWOCE, WARZYWA I SŁODYCZE (26) ============ -->
+  <section class="theme">
+    <div class="theme-head">
+      <h2><span>Owoce, warzywa i słodycze <span class="ru">— Фрукты, овощи и сладости</span></span></h2>
+    </div>
+    <div class="cols">
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Сладости и выпечка</h3>
+        <table><tbody>
+          <tr><td class="pl">placek</td><td class="ru">лепёшка, открытый пирог</td></tr>
+          <tr><td class="pl">ciasto</td><td class="ru">тесто; пирог</td></tr>
+          <tr><td class="pl">tort</td><td class="ru">торт</td></tr>
+          <tr><td class="pl">babka</td><td class="ru">кекс (баба)</td></tr>
+          <tr><td class="pl">mazurek</td><td class="ru">мазурек (пасхальный плоский торт)</td></tr>
+          <tr><td class="pl">krem</td><td class="ru">крем</td></tr>
+          <tr><td class="pl">galaretka owocowa</td><td class="ru">фруктовое желе</td></tr>
+          <tr><td class="pl">sernik</td><td class="ru">творожный пирог, чизкейк</td></tr>
+          <tr><td class="pl">makowiec</td><td class="ru">маковый рулет</td></tr>
+          <tr><td class="pl">szarlotka</td><td class="ru">шарлотка (яблочный пирог)</td></tr>
+          <tr><td class="pl">beza</td><td class="ru">безе</td></tr>
+          <tr><td class="pl">ekler</td><td class="ru">эклер</td></tr>
+          <tr><td class="pl">drożdżówka</td><td class="ru">дрожжевая булочка</td></tr>
+          <tr><td class="pl">batonik</td><td class="ru">батончик</td></tr>
+          <tr><td class="pl">kremówka</td><td class="ru">кремовое пирожное (наполеон)</td></tr>
+          <tr><td class="pl">pączek</td><td class="ru">пончик</td></tr>
+          <tr><td class="pl">bułeczka</td><td class="ru">булочка</td></tr>
+          <tr><td class="pl">masa do tortu</td><td class="ru">масса/начинка для торта</td></tr>
+          <tr><td class="pl">produkty</td><td class="ru">продукты</td></tr>
+          <tr><td class="pl">składniki</td><td class="ru">ингредиенты</td></tr>
+          <tr><td class="pl">porcja</td><td class="ru">порция</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>A — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">myć</td><td class="ru">мыть</td></tr>
+          <tr><td class="pl">czyścić</td><td class="ru">чистить</td></tr>
+          <tr><td class="pl">grzać</td><td class="ru">греть</td></tr>
+          <tr><td class="pl">słodzić</td><td class="ru">подслащивать</td></tr>
+          <tr><td class="pl">kupować</td><td class="ru">покупать</td></tr>
+          <tr><td class="pl">sadzić</td><td class="ru">сажать</td></tr>
+          <tr><td class="pl">podawać</td><td class="ru">подавать</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>A — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">owoce</td><td class="ru">фрукты</td></tr>
+          <tr><td class="pl">warzywa</td><td class="ru">овощи</td></tr>
+          <tr><td class="pl">jabłko</td><td class="ru">яблоко</td></tr>
+          <tr><td class="pl">ogórek</td><td class="ru">огурец</td></tr>
+          <tr><td class="pl">sad</td><td class="ru">фруктовый сад</td></tr>
+          <tr><td class="pl">drzewa owocowe</td><td class="ru">фруктовые деревья</td></tr>
+          <tr><td class="pl">ziemniaki</td><td class="ru">картофель</td></tr>
+          <tr><td class="pl">marchewka</td><td class="ru">морковь</td></tr>
+          <tr><td class="pl">cebula</td><td class="ru">лук</td></tr>
+          <tr><td class="pl">sałata</td><td class="ru">салат (листовой)</td></tr>
+          <tr><td class="pl">kartofel</td><td class="ru">картофелина, картошка</td></tr>
+          <tr><td class="pl">ciastko</td><td class="ru">пирожное</td></tr>
+          <tr><td class="pl">ciasteczko</td><td class="ru">печенье</td></tr>
+          <tr><td class="pl">lody</td><td class="ru">мороженое</td></tr>
+          <tr><td class="pl">cukierek</td><td class="ru">конфета</td></tr>
+          <tr><td class="pl">masło</td><td class="ru">сливочное масло</td></tr>
+          <tr><td class="pl">tłuszcz</td><td class="ru">жир</td></tr>
+          <tr><td class="pl">przepis</td><td class="ru">рецепт</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">skrobać</td><td class="ru">скоблить, чистить</td></tr>
+          <tr><td class="pl">rozgnieść</td><td class="ru">размять, раздавить</td></tr>
+          <tr><td class="pl">podsmażyć (usmażyć)</td><td class="ru">поджарить, обжарить</td></tr>
+          <tr><td class="pl">przecierać</td><td class="ru">протирать</td></tr>
+          <tr><td class="pl">pachnieć</td><td class="ru">пахнуть (приятно)</td></tr>
+          <tr><td class="pl">mieszać</td><td class="ru">мешать, перемешивать</td></tr>
+          <tr><td class="pl">porcjować</td><td class="ru">делить на порции</td></tr>
+          <tr><td class="pl">smarować</td><td class="ru">намазывать</td></tr>
+          <tr><td class="pl">robić</td><td class="ru">делать</td></tr>
+          <tr><td class="pl">posypać</td><td class="ru">посыпать</td></tr>
+          <tr><td class="pl">dekorować</td><td class="ru">украшать</td></tr>
+          <tr><td class="pl">przekładać</td><td class="ru">перекладывать, прослаивать</td></tr>
+          <tr><td class="pl">miksować</td><td class="ru">взбивать (миксером)</td></tr>
+          <tr><td class="pl">gnić</td><td class="ru">гнить</td></tr>
+          <tr><td class="pl">psuć się</td><td class="ru">портиться</td></tr>
+          <tr><td class="pl">cuchnąć</td><td class="ru">вонять</td></tr>
+          <tr><td class="pl">śmierdzieć</td><td class="ru">дурно пахнуть, вонять</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Овощи, фрукты, грибы</h3>
+        <table><tbody>
+          <tr><td class="pl">gruszka</td><td class="ru">груша</td></tr>
+          <tr><td class="pl">śliwka</td><td class="ru">слива</td></tr>
+          <tr><td class="pl">porzeczki</td><td class="ru">смородина</td></tr>
+          <tr><td class="pl">agrest</td><td class="ru">крыжовник</td></tr>
+          <tr><td class="pl">maliny</td><td class="ru">малина</td></tr>
+          <tr><td class="pl">truskawki</td><td class="ru">клубника</td></tr>
+          <tr><td class="pl">czereśnie</td><td class="ru">черешня</td></tr>
+          <tr><td class="pl">winogrona</td><td class="ru">виноград</td></tr>
+          <tr><td class="pl">brzoskwinia</td><td class="ru">персик</td></tr>
+          <tr><td class="pl">morele</td><td class="ru">абрикосы</td></tr>
+          <tr><td class="pl">melon</td><td class="ru">дыня</td></tr>
+          <tr><td class="pl">orzechy</td><td class="ru">орехи</td></tr>
+          <tr><td class="pl">cytryny</td><td class="ru">лимоны</td></tr>
+          <tr><td class="pl">pomarańcze</td><td class="ru">апельсины</td></tr>
+          <tr><td class="pl">ananasy</td><td class="ru">ананасы</td></tr>
+          <tr><td class="pl">borówki</td><td class="ru">черника, брусника</td></tr>
+          <tr><td class="pl">poziomki</td><td class="ru">земляника</td></tr>
+          <tr><td class="pl">wiśnie</td><td class="ru">вишня</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">rumiany</td><td class="ru">румяный</td></tr>
+          <tr><td class="pl">soczysty</td><td class="ru">сочный</td></tr>
+          <tr><td class="pl">twardy</td><td class="ru">твёрдый</td></tr>
+          <tr><td class="pl">miękki</td><td class="ru">мягкий</td></tr>
+          <tr><td class="pl">morelowy</td><td class="ru">абрикосовый</td></tr>
+          <tr><td class="pl">brzoskwiniowy</td><td class="ru">персиковый</td></tr>
+          <tr><td class="pl">kruchy</td><td class="ru">рассыпчатый, песочный</td></tr>
+          <tr><td class="pl">drożdżowy (ciasto)</td><td class="ru">дрожжевой (тесто)</td></tr>
+          <tr><td class="pl">francuskie</td><td class="ru">слоёное (французское)</td></tr>
+          <tr><td class="pl">półkruche</td><td class="ru">полупесочное (тесто)</td></tr>
+          <tr><td class="pl">apetyczny</td><td class="ru">аппетитный</td></tr>
+          <tr><td class="pl">nieapetyczny</td><td class="ru">неаппетитный</td></tr>
+          <tr><td class="pl">zepsuty</td><td class="ru">испорченный</td></tr>
+          <tr><td class="pl">zgniły</td><td class="ru">гнилой</td></tr>
+          <tr><td class="pl">dojrzały</td><td class="ru">спелый, зрелый</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Овощи, фрукты, грибы <small>— продолжение</small></h3>
+        <table><tbody>
+          <tr><td class="pl">pietruszka</td><td class="ru">петрушка</td></tr>
+          <tr><td class="pl">seler</td><td class="ru">сельдерей</td></tr>
+          <tr><td class="pl">pomidor</td><td class="ru">помидор</td></tr>
+          <tr><td class="pl">groch</td><td class="ru">горох</td></tr>
+          <tr><td class="pl">fasola</td><td class="ru">фасоль</td></tr>
+          <tr><td class="pl">cukinia</td><td class="ru">кабачок, цуккини</td></tr>
+          <tr><td class="pl">burak</td><td class="ru">свёкла</td></tr>
+          <tr><td class="pl">pory</td><td class="ru">лук-порей</td></tr>
+          <tr><td class="pl">kapusta: biała, czerwona, włoska</td><td class="ru">капуста: белая, красная, савойская</td></tr>
+          <tr><td class="pl">brukselka</td><td class="ru">брюссельская капуста</td></tr>
+          <tr><td class="pl">grzyby: pieczarki, prawdziwki</td><td class="ru">грибы: шампиньоны, белые</td></tr>
+          <tr><td class="pl">koper</td><td class="ru">укроп</td></tr>
+          <tr><td class="pl">szczypiorek</td><td class="ru">зелёный лук</td></tr>
+          <tr><td class="pl">rabarbar</td><td class="ru">ревень</td></tr>
+          <tr><td class="pl">rzodkiewka</td><td class="ru">редис</td></tr>
+          <tr><td class="pl">nać</td><td class="ru">ботва, зелень</td></tr>
+          <tr><td class="pl">korzeń</td><td class="ru">корень</td></tr>
+          <tr><td class="pl">grzyby</td><td class="ru">грибы</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>A — Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">kwaśny</td><td class="ru">кислый</td></tr>
+          <tr><td class="pl">świeży</td><td class="ru">свежий</td></tr>
+          <tr><td class="pl">czerwony</td><td class="ru">красный</td></tr>
+          <tr><td class="pl">zielony</td><td class="ru">зелёный</td></tr>
+          <tr><td class="pl">duży</td><td class="ru">большой</td></tr>
+          <tr><td class="pl">mały</td><td class="ru">маленький</td></tr>
+          <tr><td class="pl">słodki</td><td class="ru">сладкий</td></tr>
+          <tr><td class="pl">słony</td><td class="ru">солёный</td></tr>
+          <tr><td class="pl">stary</td><td class="ru">старый</td></tr>
+          <tr><td class="pl">mieszany</td><td class="ru">смешанный</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+  <!-- ============ TEMAT VIII — RODZAJE ŻYWNOŚCI (27) ============ -->
+  <section class="theme">
+    <div class="theme-head">
+      <h2><span>Rodzaje żywności <span class="ru">— Виды продуктов</span></span></h2>
+    </div>
+    <div class="cols">
+
+    <div class="col">
+      <div class="block">
+        <h3>Pieczywo <small>— хлебобулочные</small></h3>
+        <table><tbody>
+          <tr><td class="pl">chleb</td><td class="ru">хлеб</td></tr>
+          <tr><td class="pl">bułki</td><td class="ru">булки</td></tr>
+          <tr><td class="pl">rogale</td><td class="ru">рогалики</td></tr>
+          <tr><td class="pl">ciemny chleb</td><td class="ru">чёрный (тёмный) хлеб</td></tr>
+          <tr><td class="pl">weka</td><td class="ru">батон</td></tr>
+          <tr><td class="pl">chałka</td><td class="ru">хала (плетёнка)</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Wędliny <small>— мясные изделия</small></h3>
+        <table><tbody>
+          <tr><td class="pl">szynka</td><td class="ru">ветчина</td></tr>
+          <tr><td class="pl">kiełbasa</td><td class="ru">колбаса</td></tr>
+          <tr><td class="pl">parówki</td><td class="ru">сосиски</td></tr>
+          <tr><td class="pl">baleron</td><td class="ru">балык (свиной рулет)</td></tr>
+          <tr><td class="pl">salceson</td><td class="ru">зельц</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Nabiał <small>— молочное</small></h3>
+        <table><tbody>
+          <tr><td class="pl">jajka</td><td class="ru">яйца</td></tr>
+          <tr><td class="pl">ser biały</td><td class="ru">творог (белый сыр)</td></tr>
+          <tr><td class="pl">ser żółty</td><td class="ru">твёрдый сыр</td></tr>
+          <tr><td class="pl">ser topiony</td><td class="ru">плавленый сыр</td></tr>
+          <tr><td class="pl">śmietana</td><td class="ru">сметана</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Dzikie ptactwo <small>— дикая птица</small></h3>
+        <table><tbody>
+          <tr><td class="pl">bażant</td><td class="ru">фазан</td></tr>
+          <tr><td class="pl">kuropatwa</td><td class="ru">куропатка</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>Ryby <small>— рыба</small></h3>
+        <table><tbody>
+          <tr><td class="pl">pstrąg</td><td class="ru">форель</td></tr>
+          <tr><td class="pl">karp</td><td class="ru">карп</td></tr>
+          <tr><td class="pl">sardynki</td><td class="ru">сардины</td></tr>
+          <tr><td class="pl">szprotki</td><td class="ru">шпроты</td></tr>
+          <tr><td class="pl">dorsz</td><td class="ru">треска</td></tr>
+          <tr><td class="pl">morszczuk</td><td class="ru">хек</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Drób <small>— птица</small></h3>
+        <table><tbody>
+          <tr><td class="pl">kura</td><td class="ru">курица</td></tr>
+          <tr><td class="pl">kurczak</td><td class="ru">цыплёнок</td></tr>
+          <tr><td class="pl">indyk</td><td class="ru">индейка</td></tr>
+          <tr><td class="pl">kaczka</td><td class="ru">утка</td></tr>
+          <tr><td class="pl">gęś</td><td class="ru">гусь</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Owoce krajowe <small>— местные фрукты</small></h3>
+        <table><tbody>
+          <tr><td class="pl">jabłka</td><td class="ru">яблоки</td></tr>
+          <tr><td class="pl">gruszki</td><td class="ru">груши</td></tr>
+          <tr><td class="pl">śliwki</td><td class="ru">сливы</td></tr>
+          <tr><td class="pl">jagody</td><td class="ru">ягоды (черника)</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Owoce egzotyczne <small>— экзотические фрукты</small></h3>
+        <table><tbody>
+          <tr><td class="pl">banany</td><td class="ru">бананы</td></tr>
+          <tr><td class="pl">melony</td><td class="ru">дыни</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>Warzywa <small>— овощи</small></h3>
+        <table><tbody>
+          <tr><td class="pl">kapusta</td><td class="ru">капуста</td></tr>
+          <tr><td class="pl">buraki</td><td class="ru">свёкла</td></tr>
+          <tr><td class="pl">marchew</td><td class="ru">морковь</td></tr>
+          <tr><td class="pl">ogórki</td><td class="ru">огурцы</td></tr>
+          <tr><td class="pl">pomidory</td><td class="ru">помидоры</td></tr>
+          <tr><td class="pl">kalarepa</td><td class="ru">кольраби</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Tłuszcze <small>— жиры</small></h3>
+        <table><tbody>
+          <tr><td class="pl">margaryna</td><td class="ru">маргарин</td></tr>
+          <tr><td class="pl">smalec</td><td class="ru">смалец (топлёное сало)</td></tr>
+          <tr><td class="pl">olej</td><td class="ru">растительное масло</td></tr>
+          <tr><td class="pl">oliwa</td><td class="ru">оливковое масло</td></tr>
+          <tr><td class="pl">planta</td><td class="ru">кулинарный жир (марка)</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Dziczyzna <small>— дичь</small></h3>
+        <table><tbody>
+          <tr><td class="pl">zając</td><td class="ru">заяц</td></tr>
+          <tr><td class="pl">sarna</td><td class="ru">косуля</td></tr>
+          <tr><td class="pl">pasztet z dzika</td><td class="ru">паштет из кабана</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>Słodycze <small>— сладости</small></h3>
+        <table><tbody>
+          <tr><td class="pl">ciastka</td><td class="ru">пирожные, печенье</td></tr>
+          <tr><td class="pl">cukierki</td><td class="ru">конфеты</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+  <!-- ============ TEMAT VIII — KARTA DAŃ (28) ============ -->
+  <section class="theme">
+    <div class="theme-head">
+      <h2><span>Karta dań <span class="ru">— Меню</span></span></h2>
+    </div>
+    <div class="cols">
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Закуски и супы</h3>
+        <table><tbody>
+          <tr><td class="pl">zakąski</td><td class="ru">закуски</td></tr>
+          <tr><td class="pl">przystawki</td><td class="ru">закуски (антре)</td></tr>
+          <tr><td class="pl">menu</td><td class="ru">меню</td></tr>
+          <tr><td class="pl">galareta</td><td class="ru">холодец, заливное</td></tr>
+          <tr><td class="pl">tatar</td><td class="ru">тартар (сырой фарш)</td></tr>
+          <tr><td class="pl">sałatka jarzynowa</td><td class="ru">овощной салат (оливье)</td></tr>
+          <tr><td class="pl">jajecznica</td><td class="ru">яичница</td></tr>
+          <tr><td class="pl">śledź (w śmietanie, oleju)</td><td class="ru">сельдь (в сметане, масле)</td></tr>
+          <tr><td class="pl">kanapka z pastą</td><td class="ru">бутерброд с паштетом</td></tr>
+          <tr><td class="pl">pasztet</td><td class="ru">паштет</td></tr>
+          <tr><td class="pl">kapuśniak</td><td class="ru">щи (капустный суп)</td></tr>
+          <tr><td class="pl">barszcz</td><td class="ru">борщ</td></tr>
+          <tr><td class="pl">pomidorowa</td><td class="ru">томатный суп</td></tr>
+          <tr><td class="pl">ogórkowa</td><td class="ru">огуречный суп, рассольник</td></tr>
+          <tr><td class="pl">grzybowa</td><td class="ru">грибной суп</td></tr>
+          <tr><td class="pl">krupnik</td><td class="ru">крупник (крупяной суп)</td></tr>
+          <tr><td class="pl">jarzynowa</td><td class="ru">овощной суп</td></tr>
+          <tr><td class="pl">rosół</td><td class="ru">бульон (куриный)</td></tr>
+          <tr><td class="pl">żurek</td><td class="ru">журек (кислый ржаной суп)</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Напитки</h3>
+        <table><tbody>
+          <tr><td class="pl">pepsi-cola</td><td class="ru">пепси-кола</td></tr>
+          <tr><td class="pl">coca-cola</td><td class="ru">кока-кола</td></tr>
+          <tr><td class="pl">alkohole</td><td class="ru">алкогольные напитки</td></tr>
+          <tr><td class="pl">szampan</td><td class="ru">шампанское</td></tr>
+          <tr><td class="pl">koniak</td><td class="ru">коньяк</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>A — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">podać</td><td class="ru">подать</td></tr>
+          <tr><td class="pl">zebrać (ze stołu)</td><td class="ru">убрать (со стола)</td></tr>
+          <tr><td class="pl">przynieść</td><td class="ru">принести</td></tr>
+          <tr><td class="pl">postawić</td><td class="ru">поставить</td></tr>
+          <tr><td class="pl">podawać do stołu</td><td class="ru">подавать к столу</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>A — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">karta dań</td><td class="ru">меню (карта блюд)</td></tr>
+          <tr><td class="pl">danie</td><td class="ru">блюдо</td></tr>
+          <tr><td class="pl">zupy</td><td class="ru">супы</td></tr>
+          <tr><td class="pl">ryby</td><td class="ru">рыба</td></tr>
+          <tr><td class="pl">drób</td><td class="ru">птица</td></tr>
+          <tr><td class="pl">danie mięsne</td><td class="ru">мясное блюдо</td></tr>
+          <tr><td class="pl">mięso</td><td class="ru">мясо</td></tr>
+          <tr><td class="pl">kotlet</td><td class="ru">котлета, отбивная</td></tr>
+          <tr><td class="pl">ziemniaki pure</td><td class="ru">картофельное пюре</td></tr>
+          <tr><td class="pl">desery</td><td class="ru">десерты</td></tr>
+          <tr><td class="pl">napoje</td><td class="ru">напитки</td></tr>
+          <tr><td class="pl">woda mineralna</td><td class="ru">минеральная вода</td></tr>
+          <tr><td class="pl">soki owocowe</td><td class="ru">фруктовые соки</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Десерты</h3>
+        <table><tbody>
+          <tr><td class="pl">tort makowy</td><td class="ru">маковый торт</td></tr>
+          <tr><td class="pl">czekoladowy</td><td class="ru">шоколадный</td></tr>
+          <tr><td class="pl">orzechowy</td><td class="ru">ореховый</td></tr>
+          <tr><td class="pl">tartoletka</td><td class="ru">тарталетка</td></tr>
+          <tr><td class="pl">piernik</td><td class="ru">пряник</td></tr>
+          <tr><td class="pl">ćwibak</td><td class="ru">кекс с цукатами (цвибак)</td></tr>
+          <tr><td class="pl">rolada</td><td class="ru">рулет</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Гарниры (dodatki)</h3>
+        <table><tbody>
+          <tr><td class="pl">frytki</td><td class="ru">картофель фри</td></tr>
+          <tr><td class="pl">ryż</td><td class="ru">рис</td></tr>
+          <tr><td class="pl">kasza</td><td class="ru">каша, крупа</td></tr>
+          <tr><td class="pl">makaron</td><td class="ru">макароны</td></tr>
+          <tr><td class="pl">kluski</td><td class="ru">клёцки</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Салаты (sałatki)</h3>
+        <table><tbody>
+          <tr><td class="pl">surówki</td><td class="ru">салаты из свежих овощей</td></tr>
+          <tr><td class="pl">ćwikła</td><td class="ru">свекольный салат с хреном</td></tr>
+          <tr><td class="pl">ogórki (kiszone, mizeria)</td><td class="ru">огурцы (солёные; мизерия — со сметаной)</td></tr>
+          <tr><td class="pl">kapusta zasmażana</td><td class="ru">тушёная капуста с зажаркой</td></tr>
+          <tr><td class="pl">marchewka z groszkiem</td><td class="ru">морковь с горошком</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Мясо</h3>
+        <table><tbody>
+          <tr><td class="pl">kaczka z jabłkami</td><td class="ru">утка с яблоками</td></tr>
+          <tr><td class="pl">wołowina</td><td class="ru">говядина</td></tr>
+          <tr><td class="pl">wieprzowina</td><td class="ru">свинина</td></tr>
+          <tr><td class="pl">baranina</td><td class="ru">баранина</td></tr>
+          <tr><td class="pl">cielęcina</td><td class="ru">телятина</td></tr>
+          <tr><td class="pl">sznycel mielony</td><td class="ru">рубленый шницель</td></tr>
+          <tr><td class="pl">gulasz</td><td class="ru">гуляш</td></tr>
+          <tr><td class="pl">pieczeń</td><td class="ru">жаркое, запечённое мясо</td></tr>
+          <tr><td class="pl">stek</td><td class="ru">стейк</td></tr>
+          <tr><td class="pl">bitki</td><td class="ru">битки (тушёное мясо)</td></tr>
+          <tr><td class="pl">szaszłyk</td><td class="ru">шашлык</td></tr>
+          <tr><td class="pl">zrazy</td><td class="ru">зразы</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Приправы и обслуживание</h3>
+        <table><tbody>
+          <tr><td class="pl">pieprz</td><td class="ru">перец</td></tr>
+          <tr><td class="pl">papryka</td><td class="ru">паприка</td></tr>
+          <tr><td class="pl">ocet</td><td class="ru">уксус</td></tr>
+          <tr><td class="pl">maggi</td><td class="ru">магги (приправа)</td></tr>
+          <tr><td class="pl">nakryć</td><td class="ru">накрыть (на стол)</td></tr>
+          <tr><td class="pl">nalać</td><td class="ru">налить</td></tr>
+          <tr><td class="pl">dolewać</td><td class="ru">подливать</td></tr>
+          <tr><td class="pl">podliczać</td><td class="ru">подсчитывать (счёт)</td></tr>
+          <tr><td class="pl">rachunek</td><td class="ru">счёт</td></tr>
+          <tr><td class="pl">obsługa</td><td class="ru">обслуживание</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Постные блюда (jarskie)</h3>
+        <table><tbody>
+          <tr><td class="pl">pierogi</td><td class="ru">вареники, пироги</td></tr>
+          <tr><td class="pl">naleśniki</td><td class="ru">блины, блинчики</td></tr>
+          <tr><td class="pl">kluseczki</td><td class="ru">клёцки</td></tr>
+          <tr><td class="pl">omlety</td><td class="ru">омлеты</td></tr>
+          <tr><td class="pl">bigos</td><td class="ru">бигос (тушёная капуста с мясом)</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Рыба</h3>
+        <table><tbody>
+          <tr><td class="pl">halibut</td><td class="ru">палтус</td></tr>
+          <tr><td class="pl">makrela</td><td class="ru">скумбрия</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+  <!-- ============ TEMAT IX — ZAKŁADY GASTRONOMICZNE (29) ============ -->
+  <section class="theme">
+    <div class="theme-head">
+      <h2><span>Zakłady gastronomiczne <span class="ru">— Заведения общественного питания</span></span></h2>
+    </div>
+    <div class="cols">
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">toaleta (WC)</td><td class="ru">туалет</td></tr>
+          <tr><td class="pl">garderoba</td><td class="ru">гардероб</td></tr>
+          <tr><td class="pl">reszta (pieniędzy)</td><td class="ru">сдача</td></tr>
+          <tr><td class="pl">szatniarka</td><td class="ru">гардеробщица</td></tr>
+          <tr><td class="pl">rozrywka</td><td class="ru">развлечение</td></tr>
+          <tr><td class="pl">występy</td><td class="ru">выступления</td></tr>
+          <tr><td class="pl">posiłki</td><td class="ru">приёмы пищи</td></tr>
+          <tr><td class="pl">klient</td><td class="ru">клиент</td></tr>
+          <tr><td class="pl">konsument</td><td class="ru">потребитель, посетитель</td></tr>
+          <tr><td class="pl">bufetowa</td><td class="ru">буфетчица</td></tr>
+          <tr><td class="pl">barman</td><td class="ru">бармен</td></tr>
+          <tr><td class="pl">nakrycia</td><td class="ru">столовые приборы, сервировка</td></tr>
+          <tr><td class="pl">konsumpcja</td><td class="ru">потребление (заказ еды/напитков)</td></tr>
+          <tr><td class="pl">zaplecze kuchni</td><td class="ru">подсобка кухни</td></tr>
+          <tr><td class="pl">spiżarnia</td><td class="ru">кладовая для продуктов</td></tr>
+          <tr><td class="pl">zmywalnia</td><td class="ru">моечная (посудомоечная)</td></tr>
+          <tr><td class="pl">piwnica</td><td class="ru">подвал, погреб</td></tr>
+          <tr><td class="pl">składzik</td><td class="ru">кладовка, склад</td></tr>
+          <tr><td class="pl">personel</td><td class="ru">персонал</td></tr>
+          <tr><td class="pl">kawiarenka</td><td class="ru">кафешка</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>A — Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">drogi</td><td class="ru">дорогой</td></tr>
+          <tr><td class="pl">tani</td><td class="ru">дешёвый</td></tr>
+          <tr><td class="pl">nocny</td><td class="ru">ночной</td></tr>
+          <tr><td class="pl">wolny</td><td class="ru">свободный</td></tr>
+          <tr><td class="pl">zajęty</td><td class="ru">занятый</td></tr>
+          <tr><td class="pl">dla palących</td><td class="ru">для курящих</td></tr>
+          <tr><td class="pl">dla niepalących</td><td class="ru">для некурящих</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>A — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">kawiarnia</td><td class="ru">кафе, кофейня</td></tr>
+          <tr><td class="pl">ogródek</td><td class="ru">летняя площадка (садик)</td></tr>
+          <tr><td class="pl">parasol</td><td class="ru">зонт</td></tr>
+          <tr><td class="pl">zakład</td><td class="ru">заведение</td></tr>
+          <tr><td class="pl">stół</td><td class="ru">стол</td></tr>
+          <tr><td class="pl">stolik</td><td class="ru">столик</td></tr>
+          <tr><td class="pl">krzesło</td><td class="ru">стул</td></tr>
+          <tr><td class="pl">ławka</td><td class="ru">скамейка</td></tr>
+          <tr><td class="pl">miejsce</td><td class="ru">место</td></tr>
+          <tr><td class="pl">sala</td><td class="ru">зал</td></tr>
+          <tr><td class="pl">bar mleczny</td><td class="ru">молочный бар (столовая)</td></tr>
+          <tr><td class="pl">(dworcowy, piwny)</td><td class="ru">(вокзальный, пивной)</td></tr>
+          <tr><td class="pl">klub</td><td class="ru">клуб</td></tr>
+          <tr><td class="pl">bilet wstępu</td><td class="ru">входной билет</td></tr>
+          <tr><td class="pl">zaproszenie</td><td class="ru">приглашение</td></tr>
+          <tr><td class="pl">kelner</td><td class="ru">официант</td></tr>
+          <tr><td class="pl">kelnerka</td><td class="ru">официантка</td></tr>
+          <tr><td class="pl">szef</td><td class="ru">шеф, начальник</td></tr>
+          <tr><td class="pl">kierownik</td><td class="ru">управляющий, заведующий</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">elegancki</td><td class="ru">элегантный</td></tr>
+          <tr><td class="pl">całonocny</td><td class="ru">круглосуточный (всю ночь)</td></tr>
+          <tr><td class="pl">płatny</td><td class="ru">платный</td></tr>
+          <tr><td class="pl">bezpłatny</td><td class="ru">бесплатный</td></tr>
+          <tr><td class="pl">elitarny</td><td class="ru">элитный</td></tr>
+          <tr><td class="pl">wyszukany</td><td class="ru">изысканный</td></tr>
+          <tr><td class="pl">kosztowny</td><td class="ru">дорогостоящий</td></tr>
+          <tr><td class="pl">restauracja polska</td><td class="ru">польский ресторан</td></tr>
+          <tr><td class="pl">duńska</td><td class="ru">датский</td></tr>
+          <tr><td class="pl">meksykańska</td><td class="ru">мексиканский</td></tr>
+          <tr><td class="pl">włoska</td><td class="ru">итальянский</td></tr>
+          <tr><td class="pl">grecka</td><td class="ru">греческий</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Существительные <small>— продолжение</small></h3>
+        <table><tbody>
+          <tr><td class="pl">kafejka</td><td class="ru">кафешка</td></tr>
+          <tr><td class="pl">cukiernia</td><td class="ru">кондитерская</td></tr>
+          <tr><td class="pl">lokal</td><td class="ru">заведение</td></tr>
+          <tr><td class="pl">jadłodajnia</td><td class="ru">столовая, закусочная</td></tr>
+          <tr><td class="pl">knajpa</td><td class="ru">забегаловка, кабак</td></tr>
+          <tr><td class="pl">spelunka</td><td class="ru">притон, дешёвый кабак</td></tr>
+          <tr><td class="pl">dancing</td><td class="ru">танцплощадка, дансинг</td></tr>
+          <tr><td class="pl">nocny lokal</td><td class="ru">ночное заведение</td></tr>
+          <tr><td class="pl">rezerwacja</td><td class="ru">бронирование</td></tr>
+          <tr><td class="pl">bufet</td><td class="ru">буфет</td></tr>
+          <tr><td class="pl">bistro (pub = piwiarnia)</td><td class="ru">бистро (паб = пивная)</td></tr>
+          <tr><td class="pl">bar szybkiej obsługi</td><td class="ru">бар быстрого обслуживания</td></tr>
+          <tr><td class="pl">bar samoobsługowy</td><td class="ru">бар самообслуживания</td></tr>
+          <tr><td class="pl">bar z alkoholem</td><td class="ru">бар с алкоголем</td></tr>
+          <tr><td class="pl">koktajl-bar</td><td class="ru">коктейль-бар</td></tr>
+          <tr><td class="pl">tawerna</td><td class="ru">таверна</td></tr>
+          <tr><td class="pl">bar kawowy</td><td class="ru">кофе-бар</td></tr>
+          <tr><td class="pl">herbaciarnia</td><td class="ru">чайная</td></tr>
+          <tr><td class="pl">dyskoteka</td><td class="ru">дискотека</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">obsługiwać</td><td class="ru">обслуживать</td></tr>
+          <tr><td class="pl">rezerwować</td><td class="ru">бронировать</td></tr>
+          <tr><td class="pl">przysiadać się</td><td class="ru">подсаживаться</td></tr>
+          <tr><td class="pl">konsumować</td><td class="ru">потреблять (есть/пить)</td></tr>
+          <tr><td class="pl">dawać napiwek</td><td class="ru">давать чаевые</td></tr>
+          <tr><td class="pl">serwować</td><td class="ru">сервировать, подавать</td></tr>
+          <tr><td class="pl">fundować</td><td class="ru">угощать (оплачивать)</td></tr>
+          <tr><td class="pl">odżywiać się</td><td class="ru">питаться</td></tr>
+          <tr><td class="pl">zamiatać</td><td class="ru">подметать</td></tr>
+          <tr><td class="pl">odkurzać</td><td class="ru">пылесосить</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>A — Существительные <small>— продолжение</small></h3>
+        <table><tbody>
+          <tr><td class="pl">karta win</td><td class="ru">карта вин</td></tr>
+          <tr><td class="pl">specjalność zakładu</td><td class="ru">фирменное блюдо заведения</td></tr>
+          <tr><td class="pl">szef kuchni</td><td class="ru">шеф-повар</td></tr>
+          <tr><td class="pl">pracownik</td><td class="ru">работник</td></tr>
+          <tr><td class="pl">sprzątaczka</td><td class="ru">уборщица</td></tr>
+          <tr><td class="pl">kucharz</td><td class="ru">повар</td></tr>
+          <tr><td class="pl">cukiernik</td><td class="ru">кондитер</td></tr>
+          <tr><td class="pl">kuchnia</td><td class="ru">кухня</td></tr>
+          <tr><td class="pl">śniadania</td><td class="ru">завтраки</td></tr>
+          <tr><td class="pl">obiady</td><td class="ru">обеды</td></tr>
+          <tr><td class="pl">kolacje</td><td class="ru">ужины</td></tr>
+          <tr><td class="pl">wesela</td><td class="ru">свадьбы</td></tr>
+          <tr><td class="pl">imprezy</td><td class="ru">мероприятия, вечеринки</td></tr>
+          <tr><td class="pl">zabawy</td><td class="ru">развлечения, танцы</td></tr>
+          <tr><td class="pl">uroczystości</td><td class="ru">торжества</td></tr>
+          <tr><td class="pl">szatnia (obowiązkowa)</td><td class="ru">гардероб (обязательный)</td></tr>
+          <tr><td class="pl">płaszcz</td><td class="ru">пальто</td></tr>
+          <tr><td class="pl">szatniarz</td><td class="ru">гардеробщик</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>A — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">siadać</td><td class="ru">садиться</td></tr>
+          <tr><td class="pl">siedzieć</td><td class="ru">сидеть</td></tr>
+          <tr><td class="pl">zajmować (miejsce)</td><td class="ru">занимать (место)</td></tr>
+          <tr><td class="pl">przynosić</td><td class="ru">приносить</td></tr>
+          <tr><td class="pl">zamawiać</td><td class="ru">заказывать</td></tr>
+          <tr><td class="pl">czekać</td><td class="ru">ждать</td></tr>
+          <tr><td class="pl">tańczyć</td><td class="ru">танцевать</td></tr>
+          <tr><td class="pl">bawić się</td><td class="ru">развлекаться, веселиться</td></tr>
+          <tr><td class="pl">płacić</td><td class="ru">платить</td></tr>
+          <tr><td class="pl">prosić</td><td class="ru">просить</td></tr>
+          <tr><td class="pl">zbierać (ze stołu)</td><td class="ru">собирать (со стола)</td></tr>
+          <tr><td class="pl">sprzątać</td><td class="ru">убирать</td></tr>
+          <tr><td class="pl">myć (zmywać)</td><td class="ru">мыть (мыть посуду)</td></tr>
+          <tr><td class="pl">zabrać (zabierać danie)</td><td class="ru">забрать (уносить блюдо)</td></tr>
+          <tr><td class="pl">oddać (ubranie do szatni)</td><td class="ru">сдать (одежду в гардероб)</td></tr>
+          <tr><td class="pl">rozbierać się</td><td class="ru">раздеваться</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+</div>
+</body>
+</html>

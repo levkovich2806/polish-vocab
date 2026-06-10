@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Польская лексика — Человек, внешность (Temat I)</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --line: #c8c8c8;
+    --head: #2b2b2b;
+    --accent: #6d4aff;
+    --zebra: #f4f3fb;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 10.5px;
+    line-height: 1.3;
+  }
+
+  @page {
+    size: A4 landscape;
+    margin: 9mm 10mm;
+  }
+
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--accent);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 13px;
+  }
+  .toolbar a { color: #fff; text-decoration: none; }
+  .toolbar .home { font-weight: 700; white-space: nowrap; }
+  .toolbar .links { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; }
+  .toolbar .links a {
+    padding: 4px 10px;
+    border-radius: 6px;
+    opacity: .85;
+    white-space: nowrap;
+  }
+  .toolbar .links a:hover { background: rgba(255,255,255,.18); opacity: 1; }
+  .toolbar .links a.active { background: #fff; color: var(--accent); opacity: 1; font-weight: 700; }
+  .toolbar button {
+    background: #fff;
+    color: var(--accent);
+    border: none;
+    border-radius: 6px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .toolbar button:hover { background: #efeaff; }
+
+  .wrap { padding: 16px 12px; max-width: 1180px; margin: 0 auto; }
+
+  h1.doc-title {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin: 4px 0 2px;
+  }
+  p.doc-sub {
+    text-align: center;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 11px;
+    color: #555;
+    margin: 0 0 14px;
+  }
+
+  .theme { break-before: page; padding-top: 2px; }
+  .theme:first-of-type { break-before: auto; }
+
+  .theme-head {
+    border-bottom: 2px solid var(--accent);
+    margin: 0 0 8px;
+    padding-bottom: 4px;
+  }
+  .theme-head .temat {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 10px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .theme-head h2 {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 16px;
+    margin: 1px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .theme-head h2 .ru { color: #555; font-weight: 500; font-size: 13px; }
+  .theme-head h2 .pg { color: #999; font-size: 12px; }
+
+  .cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6mm;
+    align-items: flex-start;
+  }
+
+  .block {
+    flex: 1 1 0;
+    min-width: 210px;
+    margin: 0 0 9px;
+  }
+
+  .block h3 {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 11px;
+    margin: 0 0 2px;
+    color: var(--head);
+    border-left: 3px solid var(--accent);
+    padding-left: 6px;
+    break-after: avoid;
+  }
+  .block h3 + h3, .block table + h3 { margin-top: 7px; }
+  .block h3 small { color: #888; font-weight: 400; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2px;
+  }
+  td {
+    border: 1px solid var(--line);
+    padding: 2px 5px;
+    vertical-align: top;
+    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+  tr { break-inside: avoid; }
+  td.pl { font-weight: 600; width: 47%; }
+  td.ru { font-size: 10px; }
+  tbody tr:nth-child(even) { background: var(--zebra); }
+
+  @media print {
+    .toolbar { display: none; }
+    .wrap { padding: 0; max-width: none; }
+    body { font-size: 10px; line-height: 1.2; }
+    td { padding: 1px 6px; }
+    td.ru { font-size: 9.7px; }
+    .cols { gap: 5mm; }
+    .block { margin-bottom: 7px; min-width: 0; }
+    .block h3 { font-size: 11px; margin-bottom: 2px; }
+    h1.doc-title { margin: 0 0 2px; font-size: 16px; }
+    p.doc-sub { margin: 0 0 8px; }
+    .theme-head { margin-bottom: 6px; padding-bottom: 4px; }
+    .theme-head h2 { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a class="home" href="index.html">🏠 Все темы</a>
+  <div class="links">
+    <a href="01-czlowiek-i-wyglad.html" class="active">Человек и внешность</a>
+    <a href="02-rodzina-drzewo-rodowe.html">Семья и родственники</a>
+    <a href="03-jedzenie-i-gastronomia.html">Еда и гастрономия</a>
+    <a href="04-zawody.html">Профессии</a>
+  </div>
+  <button onclick="window.print()">🖨 Печать / PDF</button>
+</div>
+
+<div class="wrap">
+  <h1 class="doc-title">Польская лексика: человек и внешность</h1>
+  <p class="doc-sub">Temat I · оригинал (польский) — перевод (русский)</p>
+
+  <!-- ============ TEMAT I — TYPY LUDZI; CECHY ZEWNĘTRZNE (1) ============ -->
+  <section class="theme">
+    <div class="theme-head">
+      <h2><span>Typy ludzi; cechy zewnętrzne <span class="ru">— Типы людей; внешние черты</span></span></h2>
+    </div>
+    <div class="cols">
+
+      <div class="block">
+        <h3>A — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">człowiek</td><td class="ru">человек</td></tr>
+          <tr><td class="pl">ludzie</td><td class="ru">люди</td></tr>
+          <tr><td class="pl">postać</td><td class="ru">фигура, облик</td></tr>
+          <tr><td class="pl">mężczyzna</td><td class="ru">мужчина</td></tr>
+          <tr><td class="pl">chłopiec</td><td class="ru">мальчик</td></tr>
+          <tr><td class="pl">kobieta</td><td class="ru">женщина</td></tr>
+          <tr><td class="pl">dziewczynka</td><td class="ru">девочка</td></tr>
+          <tr><td class="pl">pan</td><td class="ru">господин, мужчина</td></tr>
+          <tr><td class="pl">pani</td><td class="ru">госпожа, женщина</td></tr>
+          <tr><td class="pl">wygląd</td><td class="ru">внешний вид</td></tr>
+          <tr><td class="pl">wzrost</td><td class="ru">рост</td></tr>
+          <tr><td class="pl">budowa</td><td class="ru">телосложение</td></tr>
+          <tr><td class="pl">ciało</td><td class="ru">тело</td></tr>
+          <tr><td class="pl">wiek</td><td class="ru">возраст</td></tr>
+          <tr><td class="pl">dzieci</td><td class="ru">дети</td></tr>
+          <tr><td class="pl">młodzież</td><td class="ru">молодёжь</td></tr>
+          <tr><td class="pl">dorośli</td><td class="ru">взрослые</td></tr>
+          <tr><td class="pl">przedszkolak</td><td class="ru">дошкольник</td></tr>
+          <tr><td class="pl">chłopak</td><td class="ru">парень</td></tr>
+          <tr><td class="pl">uczeń</td><td class="ru">ученик</td></tr>
+          <tr><td class="pl">dziewczyna</td><td class="ru">девушка</td></tr>
+          <tr><td class="pl">uczennica</td><td class="ru">ученица</td></tr>
+          <tr><td class="pl">starsza pani</td><td class="ru">пожилая женщина</td></tr>
+          <tr><td class="pl">starszy pan</td><td class="ru">пожилой мужчина</td></tr>
+          <tr><td class="pl">państwo (pan + pani)</td><td class="ru">супруги, господа</td></tr>
+          <tr><td class="pl">sportowy wygląd</td><td class="ru">спортивный вид</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>A — Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">młody</td><td class="ru">молодой</td></tr>
+          <tr><td class="pl">stary</td><td class="ru">старый</td></tr>
+          <tr><td class="pl">w średnim wieku</td><td class="ru">среднего возраста</td></tr>
+          <tr><td class="pl">wysoki</td><td class="ru">высокий</td></tr>
+          <tr><td class="pl">niski</td><td class="ru">низкий</td></tr>
+          <tr><td class="pl">średni</td><td class="ru">средний</td></tr>
+          <tr><td class="pl">gruby</td><td class="ru">толстый</td></tr>
+          <tr><td class="pl">ciężki</td><td class="ru">тяжёлый</td></tr>
+          <tr><td class="pl">lekki</td><td class="ru">лёгкий</td></tr>
+          <tr><td class="pl">mały</td><td class="ru">маленький</td></tr>
+          <tr><td class="pl">duży</td><td class="ru">большой</td></tr>
+          <tr><td class="pl">ładny</td><td class="ru">красивый</td></tr>
+          <tr><td class="pl">brzydki</td><td class="ru">некрасивый</td></tr>
+          <tr><td class="pl">prosty</td><td class="ru">прямой, простой</td></tr>
+          <tr><td class="pl">przystojny</td><td class="ru">статный, привлекательный</td></tr>
+          <tr><td class="pl">dobrze zbudowany</td><td class="ru">хорошо сложённый</td></tr>
+          <tr><td class="pl">drobny</td><td class="ru">мелкий, щуплый</td></tr>
+        </tbody></table>
+
+        <h3>A — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">stać</td><td class="ru">стоять</td></tr>
+          <tr><td class="pl">siedzieć</td><td class="ru">сидеть</td></tr>
+          <tr><td class="pl">chodzić</td><td class="ru">ходить</td></tr>
+          <tr><td class="pl">wyglądać</td><td class="ru">выглядеть</td></tr>
+          <tr><td class="pl">mieć</td><td class="ru">иметь</td></tr>
+          <tr><td class="pl">ćwiczyć</td><td class="ru">тренироваться, заниматься</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">baba</td><td class="ru">баба</td></tr>
+          <tr><td class="pl">facet</td><td class="ru">мужик, тип</td></tr>
+          <tr><td class="pl">wygląd zewnętrzny</td><td class="ru">внешний вид</td></tr>
+          <tr><td class="pl">powierzchowność</td><td class="ru">внешность</td></tr>
+          <tr><td class="pl">sylwetka</td><td class="ru">силуэт, фигура</td></tr>
+          <tr><td class="pl">tusza</td><td class="ru">комплекция, полнота</td></tr>
+          <tr><td class="pl">tyczka</td><td class="ru">жердь (о худом высоком)</td></tr>
+          <tr><td class="pl">staruszek</td><td class="ru">старичок</td></tr>
+          <tr><td class="pl">starzec</td><td class="ru">старик</td></tr>
+          <tr><td class="pl">noworodek</td><td class="ru">новорождённый</td></tr>
+          <tr><td class="pl">niemowlę</td><td class="ru">младенец, грудной ребёнок</td></tr>
+          <tr><td class="pl">emeryt</td><td class="ru">пенсионер</td></tr>
+          <tr><td class="pl">panna</td><td class="ru">девушка, барышня</td></tr>
+          <tr><td class="pl">podlotek</td><td class="ru">девочка-подросток</td></tr>
+          <tr><td class="pl">maluch</td><td class="ru">малыш</td></tr>
+          <tr><td class="pl">chudzielec</td><td class="ru">худышка, доходяга</td></tr>
+        </tbody></table>
+
+        <h3>B — Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">chudy</td><td class="ru">худой</td></tr>
+          <tr><td class="pl">szczupły</td><td class="ru">стройный, худощавый</td></tr>
+          <tr><td class="pl">tęgi</td><td class="ru">полный, тучный</td></tr>
+          <tr><td class="pl">zgrabny</td><td class="ru">стройный, ладный</td></tr>
+          <tr><td class="pl">niezgrabny</td><td class="ru">нескладный, неуклюжий</td></tr>
+          <tr><td class="pl">zwalisty</td><td class="ru">грузный, массивный</td></tr>
+          <tr><td class="pl">uroczy</td><td class="ru">очаровательный</td></tr>
+          <tr><td class="pl">zgarbiony</td><td class="ru">сгорбленный</td></tr>
+          <tr><td class="pl">pochylony</td><td class="ru">сутулый, наклонённый</td></tr>
+          <tr><td class="pl">wyprostowany</td><td class="ru">с прямой осанкой</td></tr>
+          <tr><td class="pl">elegancki</td><td class="ru">элегантный</td></tr>
+          <tr><td class="pl">ubrany</td><td class="ru">одетый</td></tr>
+        </tbody></table>
+
+        <h3>B — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">gimnastykować się</td><td class="ru">заниматься гимнастикой</td></tr>
+        </tbody></table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ TEMAT I — WYGLĄD CZŁOWIEKA; OCZY, WŁOSY (2) ============ -->
+  <section class="theme">
+    <div class="theme-head">
+      <h2><span>Wygląd człowieka; oczy, włosy <span class="ru">— Внешность человека; глаза, волосы</span></span></h2>
+    </div>
+    <div class="cols">
+
+      <div class="block">
+        <h3>A — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">oczy</td><td class="ru">глаза</td></tr>
+          <tr><td class="pl">okulary</td><td class="ru">очки</td></tr>
+          <tr><td class="pl">włosy</td><td class="ru">волосы</td></tr>
+          <tr><td class="pl">„marchewka”</td><td class="ru">«морковка» (рыжий цвет волос)</td></tr>
+          <tr><td class="pl">fryzjer</td><td class="ru">парикмахер</td></tr>
+          <tr><td class="pl">grzebień</td><td class="ru">расчёска, гребень</td></tr>
+          <tr><td class="pl">łysy</td><td class="ru">лысый</td></tr>
+          <tr><td class="pl">bez włosów</td><td class="ru">без волос</td></tr>
+        </tbody></table>
+
+        <h3>A — Прилагательные <small>(глаза, волосы)</small></h3>
+        <table><tbody>
+          <tr><td class="pl">czarne</td><td class="ru">чёрные</td></tr>
+          <tr><td class="pl">brązowe</td><td class="ru">карие, коричневые</td></tr>
+          <tr><td class="pl">zielone</td><td class="ru">зелёные</td></tr>
+          <tr><td class="pl">niebieskie</td><td class="ru">голубые</td></tr>
+          <tr><td class="pl">piękne</td><td class="ru">прекрасные</td></tr>
+          <tr><td class="pl">ładne</td><td class="ru">красивые</td></tr>
+          <tr><td class="pl">brzydkie</td><td class="ru">некрасивые</td></tr>
+          <tr><td class="pl">smutne</td><td class="ru">грустные</td></tr>
+          <tr><td class="pl">wesołe</td><td class="ru">весёлые</td></tr>
+          <tr><td class="pl">małe</td><td class="ru">маленькие</td></tr>
+          <tr><td class="pl">duże</td><td class="ru">большие</td></tr>
+          <tr><td class="pl">jasne</td><td class="ru">светлые</td></tr>
+          <tr><td class="pl">ciemne</td><td class="ru">тёмные</td></tr>
+          <tr><td class="pl">długie</td><td class="ru">длинные</td></tr>
+          <tr><td class="pl">proste</td><td class="ru">прямые</td></tr>
+          <tr><td class="pl">suche</td><td class="ru">сухие</td></tr>
+          <tr><td class="pl">rzadkie</td><td class="ru">редкие</td></tr>
+          <tr><td class="pl">krótkie</td><td class="ru">короткие</td></tr>
+          <tr><td class="pl">tłuste</td><td class="ru">жирные</td></tr>
+          <tr><td class="pl">nieładne</td><td class="ru">некрасивые</td></tr>
+          <tr><td class="pl">siwe</td><td class="ru">седые</td></tr>
+          <tr><td class="pl">gęste</td><td class="ru">густые</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>A — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">malować</td><td class="ru">красить, подкрашивать</td></tr>
+          <tr><td class="pl">zamykać</td><td class="ru">закрывать</td></tr>
+          <tr><td class="pl">otwierać</td><td class="ru">открывать</td></tr>
+          <tr><td class="pl">czesać</td><td class="ru">причёсывать</td></tr>
+          <tr><td class="pl">nosić</td><td class="ru">носить</td></tr>
+          <tr><td class="pl">wiązać</td><td class="ru">завязывать</td></tr>
+          <tr><td class="pl">myć</td><td class="ru">мыть</td></tr>
+        </tbody></table>
+
+        <h3>B — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">brwi</td><td class="ru">брови</td></tr>
+          <tr><td class="pl">rzęsy</td><td class="ru">ресницы</td></tr>
+          <tr><td class="pl">oprawa oczu</td><td class="ru">разрез/обрамление глаз</td></tr>
+          <tr><td class="pl">blondyn</td><td class="ru">блондин</td></tr>
+          <tr><td class="pl">szatyn</td><td class="ru">шатен</td></tr>
+          <tr><td class="pl">brunet</td><td class="ru">брюнет</td></tr>
+          <tr><td class="pl">rudzielec</td><td class="ru">рыжий (человек)</td></tr>
+          <tr><td class="pl">siwizna</td><td class="ru">седина</td></tr>
+          <tr><td class="pl">warkocz</td><td class="ru">коса</td></tr>
+          <tr><td class="pl">„koński ogon”</td><td class="ru">«конский хвост»</td></tr>
+          <tr><td class="pl">kok</td><td class="ru">пучок (причёска)</td></tr>
+          <tr><td class="pl">loki</td><td class="ru">локоны</td></tr>
+          <tr><td class="pl">„afro”</td><td class="ru">«афро»</td></tr>
+          <tr><td class="pl">„na jeża”</td><td class="ru">«ёжик» (стрижка)</td></tr>
+          <tr><td class="pl">kucyki</td><td class="ru">хвостики</td></tr>
+          <tr><td class="pl">fryzura</td><td class="ru">причёска</td></tr>
+          <tr><td class="pl">brylantyna</td><td class="ru">бриллиантин</td></tr>
+          <tr><td class="pl">żel</td><td class="ru">гель</td></tr>
+          <tr><td class="pl">trwała ondulacja</td><td class="ru">химическая завивка</td></tr>
+          <tr><td class="pl">szampon</td><td class="ru">шампунь</td></tr>
+          <tr><td class="pl">wąsy</td><td class="ru">усы</td></tr>
+          <tr><td class="pl">bokobrody</td><td class="ru">бакенбарды</td></tr>
+          <tr><td class="pl">zarost</td><td class="ru">щетина, растительность на лице</td></tr>
+          <tr><td class="pl">grzywka</td><td class="ru">чёлка</td></tr>
+          <tr><td class="pl">przedziałek</td><td class="ru">пробор</td></tr>
+          <tr><td class="pl">pejsy</td><td class="ru">пейсы</td></tr>
+          <tr><td class="pl">peruka</td><td class="ru">парик</td></tr>
+          <tr><td class="pl">suszarka</td><td class="ru">фен</td></tr>
+        </tbody></table>
+      </div>
+
+      <div class="block">
+        <h3>B — Прилагательные <small>(глаза, волосы)</small></h3>
+        <table><tbody>
+          <tr><td class="pl">piwne</td><td class="ru">карие (о глазах)</td></tr>
+          <tr><td class="pl">migdałowe</td><td class="ru">миндалевидные</td></tr>
+          <tr><td class="pl">skośne</td><td class="ru">раскосые</td></tr>
+          <tr><td class="pl">wyłupiaste</td><td class="ru">выпученные</td></tr>
+          <tr><td class="pl">zezowate</td><td class="ru">косые, косоглазые</td></tr>
+          <tr><td class="pl">szare</td><td class="ru">серые</td></tr>
+          <tr><td class="pl">blond</td><td class="ru">белокурые</td></tr>
+          <tr><td class="pl">rude</td><td class="ru">рыжие</td></tr>
+          <tr><td class="pl">kręcone</td><td class="ru">вьющиеся</td></tr>
+          <tr><td class="pl">kędzierzawe</td><td class="ru">кудрявые</td></tr>
+          <tr><td class="pl">przylizane</td><td class="ru">прилизанные</td></tr>
+          <tr><td class="pl">puszyste</td><td class="ru">пушистые</td></tr>
+          <tr><td class="pl">rozpuszczone</td><td class="ru">распущенные</td></tr>
+          <tr><td class="pl">upięte</td><td class="ru">собранные, заколотые</td></tr>
+          <tr><td class="pl">uczesane</td><td class="ru">причёсанные</td></tr>
+          <tr><td class="pl">szpakowate</td><td class="ru">с проседью</td></tr>
+          <tr><td class="pl">sztuczne</td><td class="ru">искусственные</td></tr>
+        </tbody></table>
+
+        <h3>B — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">tuszować rzęsy</td><td class="ru">красить ресницы тушью</td></tr>
+          <tr><td class="pl">wyskubywać brwi</td><td class="ru">выщипывать брови</td></tr>
+          <tr><td class="pl">zapuścić włosy</td><td class="ru">отрастить волосы</td></tr>
+          <tr><td class="pl">farbować</td><td class="ru">красить (волосы)</td></tr>
+          <tr><td class="pl">modelować</td><td class="ru">укладывать, моделировать</td></tr>
+          <tr><td class="pl">ułożyć</td><td class="ru">уложить (волосы)</td></tr>
+          <tr><td class="pl">czesać się z przedziałkiem</td><td class="ru">причёсываться на пробор</td></tr>
+          <tr><td class="pl">splatać</td><td class="ru">заплетать</td></tr>
+          <tr><td class="pl">strzyc się</td><td class="ru">стричься</td></tr>
+          <tr><td class="pl">nosić brodę</td><td class="ru">носить бороду</td></tr>
+          <tr><td class="pl">przycinać</td><td class="ru">подстригать</td></tr>
+          <tr><td class="pl">rozjaśniać</td><td class="ru">осветлять</td></tr>
+          <tr><td class="pl">przyciemniać</td><td class="ru">затемнять (делать темнее)</td></tr>
+        </tbody></table>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
