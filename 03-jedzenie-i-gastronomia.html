@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
+<script>(function(){try{var t=localStorage.getItem("theme");if(t==="dark")document.documentElement.dataset.theme="dark";}catch(e){}})();</script>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="theme.css">
 <title>Польская лексика — Еда, напитки, гастрономия (Tematy VIII–IX)</title>
 <style>
   :root {
@@ -67,6 +69,106 @@
     white-space: nowrap;
   }
   .toolbar button:hover { background: #efeaff; }
+
+  .toolbar button.menu-toggle,
+  .toolbar button.menu-toggle:hover {
+    background: rgba(255,255,255,.22);
+    color: #fff;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 0;
+    line-height: 0;
+  }
+  .toolbar button.menu-toggle span {
+    background: #fff;
+  }
+  .toolbar button.print-btn {
+    background: #fff;
+    color: var(--accent);
+    height: 40px;
+    min-width: 40px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+
+  .toolbar-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+  .toolbar .home { flex: 1; min-width: 0; }
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: rgba(255,255,255,.15);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  
+  .menu-toggle:hover { background: rgba(255,255,255,.25); }
+  .menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 1px;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+  .toolbar.is-open .menu-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .toolbar.is-open .menu-toggle span:nth-child(2) { opacity: 0; }
+  .toolbar.is-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .toolbar .print-btn { margin-left: auto; }
+  .print-btn .short { display: none; }
+
+
+  @media (min-width: 769px) {
+    .toolbar { flex-wrap: nowrap; }
+    .toolbar-top { display: contents; }
+    .toolbar .home { order: 1; flex: 0 0 auto; }
+    .toolbar .links { order: 2; flex: 1; }
+    .theme-toggle { order: 3; }
+    .print-btn { order: 4; margin-left: 0; }
+  }
+
+  @media (max-width: 768px) {
+    .toolbar {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 8px 12px;
+    }
+    .menu-toggle { display: flex; }
+    .toolbar .links {
+      display: none;
+      flex-direction: column;
+      gap: 2px;
+      width: 100%;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255,255,255,.2);
+    }
+    .toolbar.is-open .links { display: flex; }
+    .toolbar .links a {
+      padding: 10px 12px;
+      border-radius: 8px;
+      white-space: normal;
+    }
+    .print-btn .full { display: none; }
+    .print-btn .short { display: inline; }
+  }
+
 
   .wrap { padding: 16px 12px; max-width: 1180px; margin: 0 auto; }
 
@@ -174,15 +276,22 @@
 <body>
 
 <div class="toolbar">
-  <a class="home" href="index.html">🏠 Все темы</a>
-  <div class="links">
-    <a href="01-czlowiek-i-wyglad.html">Человек и внешность</a>
+  <div class="toolbar-top">
+    <a class="home" href="index.html">🏠 Все темы</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+    <button class="theme-toggle" type="button" aria-label="Тёмная тема" title="Тёмная тема">
+      <span class="icon-light" aria-hidden="true">☀</span>
+      <span class="icon-dark" aria-hidden="true">☽</span>
+    </button>
+    <button class="print-btn" type="button" ><span class="full">🖨 Печать / PDF</span><span class="short">PDF ↓</span></button>
+  </div>
+  <nav class="links" id="nav-menu"><a href="01-czlowiek-i-wyglad.html">Человек и внешность</a>
     <a href="02-rodzina-drzewo-rodowe.html">Семья и родственники</a>
     <a href="03-jedzenie-i-gastronomia.html" class="active">Еда и гастрономия</a>
     <a href="04-zawody.html">Профессии</a>
-    <a href="05-sklep-garderoba-kolory-ksztalty.html">Магазин, одежда, цвета</a>
-  </div>
-  <button onclick="window.print()">🖨 Печать / PDF</button>
+    <a href="05-sklep-garderoba-kolory-ksztalty.html">Магазин, одежда, цвета</a></nav>
 </div>
 
 <div class="wrap">
@@ -1077,5 +1186,9 @@
   </section>
 
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" crossorigin="anonymous"></script>
+<script src="site.js"></script>
+
 </body>
 </html>

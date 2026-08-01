@@ -1,0 +1,115 @@
+/* ---- Theme toggle button ---- */
+.toolbar button.theme-toggle {
+  background: rgba(255, 255, 255, .22);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.toolbar button.theme-toggle:hover {
+  background: rgba(255, 255, 255, .32);
+}
+.theme-toggle .icon-dark { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-light { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-dark { display: inline; }
+
+@media (min-width: 769px) {
+  .theme-toggle { order: 3; }
+  .print-btn { order: 4; }
+}
+
+/* ---- Dark theme ---- */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #e8e6f2;
+  --line: #4a4660;
+  --head: #f0eef8;
+  --zebra: #2e2b42;
+  --muted: #a09eb5;
+  --card: #2a2740;
+  --bg: #16141f;
+  --addbg: #3d3528;
+  --addaccent: #f0a030;
+}
+
+html[data-theme="dark"] body {
+  background: #16141f;
+}
+
+html[data-theme="dark"] p.doc-sub,
+html[data-theme="dark"] .theme-head h2 .ru {
+  color: #a09eb5;
+}
+
+html[data-theme="dark"] .block h3 small,
+html[data-theme="dark"] .block .note {
+  color: #8a879c;
+}
+
+html[data-theme="dark"] .block.add h3 {
+  color: #f0c060;
+}
+
+html[data-theme="dark"] .block.add table td {
+  border-color: #6a5838;
+}
+
+html[data-theme="dark"] .block.add tbody tr:nth-child(odd) {
+  background: #2a2520;
+}
+
+/* index.html */
+html[data-theme="dark"] .tip {
+  background: #2a2740;
+  border-color: #4a4660;
+  color: #c4b896;
+}
+
+html[data-theme="dark"] .tip b {
+  color: #e0d4a8;
+}
+
+html[data-theme="dark"] .card:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .35);
+}
+
+/* Print always light */
+@media print {
+  html[data-theme="dark"] {
+    --ink: #1a1a1a;
+    --line: #c8c8c8;
+    --head: #2b2b2b;
+    --zebra: #f4f3fb;
+  }
+
+  html[data-theme="dark"] body {
+    background: #fff;
+    color: #1a1a1a;
+  }
+
+  html[data-theme="dark"] p.doc-sub,
+  html[data-theme="dark"] .theme-head h2 .ru {
+    color: #555;
+  }
+
+  html[data-theme="dark"] .block h3 small,
+  html[data-theme="dark"] .block .note {
+    color: #888;
+  }
+
+  html[data-theme="dark"] .block.add h3 {
+    color: #8a5300;
+  }
+
+  html[data-theme="dark"] .block.add table td {
+    border-color: #f0d9a8;
+  }
+
+  html[data-theme="dark"] .block.add tbody tr:nth-child(odd) {
+    background: #fffdf7;
+  }
+}
