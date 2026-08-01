@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Польская лексика — Магазин, одежда, цвета (Tematy VII, XV)</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --line: #c8c8c8;
+    --head: #2b2b2b;
+    --accent: #6d4aff;
+    --zebra: #f4f3fb;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 10.5px;
+    line-height: 1.3;
+  }
+
+  /* ---- A4 landscape print setup ---- */
+  @page {
+    size: A4 landscape;
+    margin: 9mm 10mm;
+  }
+
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--accent);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 13px;
+  }
+  .toolbar a { color: #fff; text-decoration: none; }
+  .toolbar .home { font-weight: 700; white-space: nowrap; }
+  .toolbar .links { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; }
+  .toolbar .links a {
+    padding: 4px 10px;
+    border-radius: 6px;
+    opacity: .85;
+    white-space: nowrap;
+  }
+  .toolbar .links a:hover { background: rgba(255,255,255,.18); opacity: 1; }
+  .toolbar .links a.active { background: #fff; color: var(--accent); opacity: 1; font-weight: 700; }
+  .toolbar button {
+    background: #fff;
+    color: var(--accent);
+    border: none;
+    border-radius: 6px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .toolbar button:hover { background: #efeaff; }
+
+  .wrap { padding: 16px 12px; max-width: 1180px; margin: 0 auto; }
+
+  h1.doc-title {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin: 4px 0 2px;
+  }
+  p.doc-sub {
+    text-align: center;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 11px;
+    color: #555;
+    margin: 0 0 14px;
+  }
+
+  .theme { break-before: page; padding-top: 2px; }
+  .theme:first-of-type { break-before: auto; }
+
+  .theme-head {
+    border-bottom: 2px solid var(--accent);
+    margin: 0 0 8px;
+    padding-bottom: 4px;
+  }
+  .theme-head .temat {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 10px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .theme-head h2 {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 16px;
+    margin: 1px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .theme-head h2 .ru { color: #555; font-weight: 500; font-size: 13px; }
+  .theme-head h2 .pg { color: #999; font-size: 12px; }
+
+  .cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6mm;
+    align-items: flex-start;
+  }
+
+  .col {
+    flex: 1 1 0;
+    min-width: 200px;
+  }
+
+  .block {
+    margin: 0 0 9px;
+  }
+
+  .block h3 {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 11px;
+    margin: 0 0 2px;
+    color: var(--head);
+    border-left: 3px solid var(--accent);
+    padding-left: 6px;
+    break-after: avoid;
+  }
+  .block h3 small { color: #888; font-weight: 400; }
+  .block .note {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 9px;
+    color: #888;
+    margin: 0 0 3px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2px;
+  }
+  td {
+    border: 1px solid var(--line);
+    padding: 2px 5px;
+    vertical-align: top;
+    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+  tr { break-inside: avoid; }
+  td.pl { font-weight: 600; width: 47%; }
+  td.ru { font-size: 10px; }
+  tbody tr:nth-child(even) { background: var(--zebra); }
+
+  @media print {
+    .toolbar { display: none; }
+    .wrap { padding: 0; max-width: none; }
+    body { font-size: 10px; line-height: 1.2; }
+    td { padding: 1px 6px; }
+    td.ru { font-size: 9.7px; }
+    .cols { gap: 5mm; }
+    .col { min-width: 0; }
+    .block { margin-bottom: 7px; }
+    .block h3 { font-size: 11px; margin-bottom: 2px; }
+    h1.doc-title { margin: 0 0 2px; font-size: 16px; }
+    p.doc-sub { margin: 0 0 8px; }
+    .theme-head { margin-bottom: 6px; padding-bottom: 4px; }
+    .theme-head h2 { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a class="home" href="index.html">🏠 Все темы</a>
+  <div class="links">
+    <a href="01-czlowiek-i-wyglad.html">Человек и внешность</a>
+    <a href="02-rodzina-drzewo-rodowe.html">Семья и родственники</a>
+    <a href="03-jedzenie-i-gastronomia.html">Еда и гастрономия</a>
+    <a href="04-zawody.html">Профессии</a>
+    <a href="05-sklep-garderoba-kolory-ksztalty.html" class="active">Магазин, одежда, цвета</a>
+  </div>
+  <button onclick="window.print()">🖨 Печать / PDF</button>
+</div>
+
+<div class="wrap">
+  <h1 class="doc-title">Польская лексика: магазин, одежда, цвета и формы</h1>
+  <p class="doc-sub">Tematy VII, XV · оригинал (польский) — перевод (русский)</p>
+
+  <section class="theme">
+    <div class="theme-head">
+      <h2><span>W sklepie <span class="ru">— В магазине</span></span></h2>
+    </div>
+    <div class="cols">
+
+    <div class="col">
+      <div class="block">
+        <h3>A — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">handel</td><td class="ru">торговля</td></tr>
+          <tr><td class="pl">kasa</td><td class="ru">касса</td></tr>
+          <tr><td class="pl">sprzedawca</td><td class="ru">продавец</td></tr>
+          <tr><td class="pl">kierownik</td><td class="ru">заведующий, руководитель</td></tr>
+          <tr><td class="pl">pieniądze</td><td class="ru">деньги</td></tr>
+          <tr><td class="pl">rachunek</td><td class="ru">счёт</td></tr>
+          <tr><td class="pl">cena</td><td class="ru">цена</td></tr>
+          <tr><td class="pl">kolor</td><td class="ru">цвет</td></tr>
+          <tr><td class="pl">ilość</td><td class="ru">количество</td></tr>
+          <tr><td class="pl">papier</td><td class="ru">бумага</td></tr>
+          <tr><td class="pl">wybór</td><td class="ru">выбор</td></tr>
+          <tr><td class="pl">lodówka</td><td class="ru">холодильник</td></tr>
+          <tr><td class="pl">koszyk</td><td class="ru">корзина</td></tr>
+          <tr><td class="pl">wózek</td><td class="ru">тележка</td></tr>
+          <tr><td class="pl">gatunek</td><td class="ru">сорт, вид</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>A — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">możliwość</td><td class="ru">возможность</td></tr>
+          <tr><td class="pl">torba</td><td class="ru">сумка</td></tr>
+          <tr><td class="pl">kolejka</td><td class="ru">очередь</td></tr>
+          <tr><td class="pl">złotówka</td><td class="ru">злотый</td></tr>
+          <tr><td class="pl">wejście</td><td class="ru">вход</td></tr>
+          <tr><td class="pl">wyjście</td><td class="ru">выход</td></tr>
+          <tr><td class="pl">rzecz</td><td class="ru">вещь</td></tr>
+          <tr><td class="pl">sklep</td><td class="ru">магазин</td></tr>
+          <tr><td class="pl">plac</td><td class="ru">площадь, рынок</td></tr>
+          <tr><td class="pl">rynek</td><td class="ru">рынок</td></tr>
+          <tr><td class="pl">ubranie</td><td class="ru">одежда</td></tr>
+          <tr><td class="pl">jedzenie</td><td class="ru">еда</td></tr>
+          <tr><td class="pl">grosz</td><td class="ru">грош</td></tr>
+          <tr><td class="pl">towar</td><td class="ru">товар</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>A — Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">otwarty</td><td class="ru">открытый</td></tr>
+          <tr><td class="pl">zamknięty</td><td class="ru">закрытый</td></tr>
+          <tr><td class="pl">pusty</td><td class="ru">пустой</td></tr>
+          <tr><td class="pl">pełny</td><td class="ru">полный</td></tr>
+          <tr><td class="pl">drogi</td><td class="ru">дорогой</td></tr>
+          <tr><td class="pl">tani</td><td class="ru">дешёвый</td></tr>
+          <tr><td class="pl">papierowy</td><td class="ru">бумажный</td></tr>
+          <tr><td class="pl">metalowy</td><td class="ru">металлический</td></tr>
+          <tr><td class="pl">ładny</td><td class="ru">красивый</td></tr>
+          <tr><td class="pl">brzydki</td><td class="ru">уродливый</td></tr>
+          <tr><td class="pl">duży</td><td class="ru">большой</td></tr>
+          <tr><td class="pl">mały</td><td class="ru">маленький</td></tr>
+          <tr><td class="pl">świeży</td><td class="ru">свежий</td></tr>
+          <tr><td class="pl">nowy</td><td class="ru">новый</td></tr>
+          <tr><td class="pl">stary</td><td class="ru">старый</td></tr>
+          <tr><td class="pl">drobny</td><td class="ru">мелкий</td></tr>
+          <tr><td class="pl">handlowy</td><td class="ru">торговый</td></tr>
+          <tr><td class="pl">uprzejmy</td><td class="ru">вежливый</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">naprawy (gwarancyjne)</td><td class="ru">ремонт (гарантийный)</td></tr>
+          <tr><td class="pl">paragon</td><td class="ru">чек</td></tr>
+          <tr><td class="pl">kwit</td><td class="ru">квитанция</td></tr>
+          <tr><td class="pl">kwitek</td><td class="ru">квиток</td></tr>
+          <tr><td class="pl">pojemnik</td><td class="ru">контейнер</td></tr>
+          <tr><td class="pl">skrzynka</td><td class="ru">ящик</td></tr>
+          <tr><td class="pl">półka</td><td class="ru">полка</td></tr>
+          <tr><td class="pl">regał</td><td class="ru">стеллаж</td></tr>
+          <tr><td class="pl">sprzedaż</td><td class="ru">продажа</td></tr>
+          <tr><td class="pl">rata</td><td class="ru">рассрочка, взнос</td></tr>
+          <tr><td class="pl">rozmiar</td><td class="ru">размер</td></tr>
+          <tr><td class="pl">jakość</td><td class="ru">качество</td></tr>
+          <tr><td class="pl">pudło</td><td class="ru">ящик, короб</td></tr>
+          <tr><td class="pl">pudełko</td><td class="ru">коробка</td></tr>
+          <tr><td class="pl">karton</td><td class="ru">картон, коробка</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>B — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">paleta</td><td class="ru">палета</td></tr>
+          <tr><td class="pl">paczka</td><td class="ru">посылка, упаковка</td></tr>
+          <tr><td class="pl">hurt</td><td class="ru">опт</td></tr>
+          <tr><td class="pl">detal</td><td class="ru">розница</td></tr>
+          <tr><td class="pl">mrożonki</td><td class="ru">замороженные продукты</td></tr>
+          <tr><td class="pl">worek</td><td class="ru">мешок</td></tr>
+          <tr><td class="pl">torebka</td><td class="ru">сумочка</td></tr>
+          <tr><td class="pl">punkt (handlowy)</td><td class="ru">торговая точка</td></tr>
+          <tr><td class="pl">lada</td><td class="ru">прилавок</td></tr>
+          <tr><td class="pl">zamrażarka</td><td class="ru">морозильник</td></tr>
+          <tr><td class="pl">klient</td><td class="ru">клиент</td></tr>
+          <tr><td class="pl">hurtownik</td><td class="ru">оптовик</td></tr>
+          <tr><td class="pl">właściciel</td><td class="ru">владелец</td></tr>
+          <tr><td class="pl">oszust</td><td class="ru">мошенник</td></tr>
+          <tr><td class="pl">konwojent</td><td class="ru">инкассатор</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>B — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">złodziej</td><td class="ru">вор</td></tr>
+          <tr><td class="pl">przemyt</td><td class="ru">контрабанда</td></tr>
+          <tr><td class="pl">waga</td><td class="ru">весы</td></tr>
+          <tr><td class="pl">stoisko</td><td class="ru">прилавок, киоск</td></tr>
+          <tr><td class="pl">portfel</td><td class="ru">кошелёк, портфель</td></tr>
+          <tr><td class="pl">portmonetka</td><td class="ru">монетница</td></tr>
+          <tr><td class="pl">dostawca</td><td class="ru">поставщик</td></tr>
+          <tr><td class="pl">dostawa</td><td class="ru">доставка</td></tr>
+          <tr><td class="pl">przyjęcie towaru</td><td class="ru">приём товара</td></tr>
+          <tr><td class="pl">remanent</td><td class="ru">инвентаризация</td></tr>
+          <tr><td class="pl">siatka</td><td class="ru">сетка, сетчатый пакет</td></tr>
+          <tr><td class="pl">reklamówka</td><td class="ru">полиэтиленовый пакет</td></tr>
+          <tr><td class="pl">reklama</td><td class="ru">реклама</td></tr>
+          <tr><td class="pl">promocja</td><td class="ru">акция, промо</td></tr>
+          <tr><td class="pl">reklamacja</td><td class="ru">рекламация</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>B — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">gwarancja</td><td class="ru">гарантия</td></tr>
+          <tr><td class="pl">reszta</td><td class="ru">сдача</td></tr>
+          <tr><td class="pl">monety</td><td class="ru">монеты</td></tr>
+          <tr><td class="pl">bilon</td><td class="ru">мелочь</td></tr>
+          <tr><td class="pl">banknoty</td><td class="ru">банкноты</td></tr>
+          <tr><td class="pl">opakowanie</td><td class="ru">упаковка</td></tr>
+          <tr><td class="pl">sznurek</td><td class="ru">шнур, бечёвка</td></tr>
+          <tr><td class="pl">etykietka</td><td class="ru">этикетка</td></tr>
+          <tr><td class="pl">gotówka</td><td class="ru">наличные</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>B — Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">firmowy</td><td class="ru">фирменный</td></tr>
+          <tr><td class="pl">gwarancyjny</td><td class="ru">гарантийный</td></tr>
+          <tr><td class="pl">wybrakowany</td><td class="ru">бракованный</td></tr>
+          <tr><td class="pl">jakościowy</td><td class="ru">качественный</td></tr>
+          <tr><td class="pl">czynny</td><td class="ru">действующий, открытый</td></tr>
+          <tr><td class="pl">nieczynny</td><td class="ru">не действующий, закрытый</td></tr>
+          <tr><td class="pl">nieuczciwy</td><td class="ru">нечестный</td></tr>
+          <tr><td class="pl">przemycony</td><td class="ru">контрабандный</td></tr>
+          <tr><td class="pl">kasowy</td><td class="ru">кассовый</td></tr>
+          <tr><td class="pl">reklamowany</td><td class="ru">рекламируемый, возвращённый</td></tr>
+          <tr><td class="pl">targowy</td><td class="ru">рыночный, базарный</td></tr>
+          <tr><td class="pl">plastikowy</td><td class="ru">пластиковый</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>A — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">kupować / kupić</td><td class="ru">покупать / купить</td></tr>
+          <tr><td class="pl">płacić</td><td class="ru">платить</td></tr>
+          <tr><td class="pl">kosztować</td><td class="ru">стоить</td></tr>
+          <tr><td class="pl">sprzedawać</td><td class="ru">продавать</td></tr>
+          <tr><td class="pl">liczyć</td><td class="ru">считать</td></tr>
+          <tr><td class="pl">wiązać</td><td class="ru">вязать, упаковывать</td></tr>
+          <tr><td class="pl">mieć (drobne)</td><td class="ru">иметь (мелочь)</td></tr>
+          <tr><td class="pl">dać / wypisać (rachunek)</td><td class="ru">выписать (счёт)</td></tr>
+          <tr><td class="pl">przynieść</td><td class="ru">принести</td></tr>
+          <tr><td class="pl">wydać (resztę)</td><td class="ru">выдать (сдачу)</td></tr>
+          <tr><td class="pl">brać (dobierać, wybierać)</td><td class="ru">брать (подбирать, выбирать)</td></tr>
+          <tr><td class="pl">oglądać</td><td class="ru">смотреть, рассматривать</td></tr>
+          <tr><td class="pl">naprawiać</td><td class="ru">ремонтировать</td></tr>
+          <tr><td class="pl">czekać</td><td class="ru">ждать</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>B — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">sprawdzić</td><td class="ru">проверить</td></tr>
+          <tr><td class="pl">ważyć</td><td class="ru">взвешивать</td></tr>
+          <tr><td class="pl">pakować</td><td class="ru">упаковывать</td></tr>
+          <tr><td class="pl">wystawić / dać (np. kwit)</td><td class="ru">выписать (квитанцию)</td></tr>
+          <tr><td class="pl">udzielić (np. gwarancji)</td><td class="ru">предоставить (гарантию)</td></tr>
+          <tr><td class="pl">przeceniać</td><td class="ru">уценивать</td></tr>
+          <tr><td class="pl">rozmienić</td><td class="ru">разменять</td></tr>
+          <tr><td class="pl">zamienić</td><td class="ru">обменять</td></tr>
+          <tr><td class="pl">kasować</td><td class="ru">пробивать на кассе</td></tr>
+          <tr><td class="pl">reklamować</td><td class="ru">рекламировать; подавать рекламацию</td></tr>
+          <tr><td class="pl">zwracać (np. towar)</td><td class="ru">возвращать (товар)</td></tr>
+          <tr><td class="pl">przymierzać</td><td class="ru">примерять</td></tr>
+          <tr><td class="pl">decydować się</td><td class="ru">решаться, определяться</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+  <section class="theme">
+    <div class="theme-head">
+      <h2><span>Rodzaje sklepów <span class="ru">— Виды магазинов</span></span></h2>
+    </div>
+    <div class="cols">
+
+    <div class="col">
+      <div class="block">
+        <h3>A — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">plac</td><td class="ru">площадь, рынок</td></tr>
+          <tr><td class="pl">buty</td><td class="ru">обувь</td></tr>
+          <tr><td class="pl">księgarnia</td><td class="ru">книжный магазин</td></tr>
+          <tr><td class="pl">książki</td><td class="ru">книги</td></tr>
+          <tr><td class="pl">ryby</td><td class="ru">рыба</td></tr>
+          <tr><td class="pl">mięso</td><td class="ru">мясо</td></tr>
+          <tr><td class="pl">mięsny</td><td class="ru">мясной (магазин)</td></tr>
+          <tr><td class="pl">elektryczny</td><td class="ru">электротоварный</td></tr>
+          <tr><td class="pl">sportowy</td><td class="ru">спортивный</td></tr>
+          <tr><td class="pl">meblowy</td><td class="ru">мебельный</td></tr>
+          <tr><td class="pl">zabawka</td><td class="ru">игрушка</td></tr>
+          <tr><td class="pl">kiosk</td><td class="ru">киоск</td></tr>
+          <tr><td class="pl">kwiaty</td><td class="ru">цветы</td></tr>
+          <tr><td class="pl">chemiczny</td><td class="ru">химчистка, химический</td></tr>
+          <tr><td class="pl">ogród</td><td class="ru">сад</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>A — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">zeszyty</td><td class="ru">тетради</td></tr>
+          <tr><td class="pl">wystawa</td><td class="ru">витрина, выставка</td></tr>
+          <tr><td class="pl">owoce</td><td class="ru">фрукты</td></tr>
+          <tr><td class="pl">warzywa</td><td class="ru">овощи</td></tr>
+          <tr><td class="pl">apteka</td><td class="ru">аптека</td></tr>
+          <tr><td class="pl">tabletki</td><td class="ru">таблетки</td></tr>
+          <tr><td class="pl">lekarstwa</td><td class="ru">лекарства</td></tr>
+          <tr><td class="pl">kwiaciarnia</td><td class="ru">цветочный магазин</td></tr>
+          <tr><td class="pl">sklep papierniczy</td><td class="ru">канцелярский магазин</td></tr>
+          <tr><td class="pl">artykuły</td><td class="ru">товары, статьи</td></tr>
+          <tr><td class="pl">sprzęt</td><td class="ru">оборудование, техника</td></tr>
+          <tr><td class="pl">zakupy</td><td class="ru">покупки</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>A — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">wydać</td><td class="ru">выдать</td></tr>
+          <tr><td class="pl">wydawać</td><td class="ru">выдавать</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">bazar</td><td class="ru">базар</td></tr>
+          <tr><td class="pl">tandeta</td><td class="ru">секонд-хенд, дешёвый товар</td></tr>
+          <tr><td class="pl">stragan</td><td class="ru">ларёк, палатка</td></tr>
+          <tr><td class="pl">obuwniczy</td><td class="ru">обувной (магазин)</td></tr>
+          <tr><td class="pl">obuwie</td><td class="ru">обувь</td></tr>
+          <tr><td class="pl">rybny</td><td class="ru">рыбный (магазин)</td></tr>
+          <tr><td class="pl">zabawkowy</td><td class="ru">игрушечный</td></tr>
+          <tr><td class="pl">odzieżowy</td><td class="ru">одежный</td></tr>
+          <tr><td class="pl">ogrodniczy</td><td class="ru">садовый</td></tr>
+          <tr><td class="pl">galanteria</td><td class="ru">галanterея</td></tr>
+          <tr><td class="pl">pasmanteria</td><td class="ru">швейная/галантерейная лавка</td></tr>
+          <tr><td class="pl">szyld</td><td class="ru">вывеска</td></tr>
+          <tr><td class="pl">neon</td><td class="ru">неоновая вывеска</td></tr>
+          <tr><td class="pl">witryna</td><td class="ru">витрина</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>B — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">zwrot</td><td class="ru">возврат</td></tr>
+          <tr><td class="pl">obsługa</td><td class="ru">обслуживание, персонал</td></tr>
+          <tr><td class="pl">konsument</td><td class="ru">потребитель</td></tr>
+          <tr><td class="pl">sklep techniczny</td><td class="ru">технический магазин</td></tr>
+          <tr><td class="pl">odzież</td><td class="ru">одежда</td></tr>
+          <tr><td class="pl">żywność</td><td class="ru">продукты питания</td></tr>
+          <tr><td class="pl">narzędzia</td><td class="ru">инструменты</td></tr>
+          <tr><td class="pl">materiały</td><td class="ru">материалы</td></tr>
+          <tr><td class="pl">jarzynowy</td><td class="ru">овощной (магазин)</td></tr>
+          <tr><td class="pl">piekarnia</td><td class="ru">пекарня</td></tr>
+          <tr><td class="pl">pieczywo</td><td class="ru">хлебобулочные изделия</td></tr>
+          <tr><td class="pl">handlowiec</td><td class="ru">торговец, продавец</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>B — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">promować</td><td class="ru">продвигать, рекламировать</td></tr>
+          <tr><td class="pl">rozmieniać pieniądze</td><td class="ru">разменивать деньги</td></tr>
+          <tr><td class="pl">przebierać</td><td class="ru">перебирать, переодеваться</td></tr>
+          <tr><td class="pl">grymasić</td><td class="ru">капризничать, корчить рожи</td></tr>
+          <tr><td class="pl">mierzyć</td><td class="ru">мерить</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+  <section class="theme">
+    <div class="theme-head">
+      <h2><span>Części garderoby <span class="ru">— Одежда и гардероб</span></span></h2>
+    </div>
+    <div class="cols">
+
+    <div class="col">
+      <div class="block">
+        <h3>A — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">ubranie</td><td class="ru">одежда</td></tr>
+          <tr><td class="pl">czapka</td><td class="ru">шапка, кепка</td></tr>
+          <tr><td class="pl">majtki</td><td class="ru">трусы, трусики</td></tr>
+          <tr><td class="pl">koszula</td><td class="ru">рубашка</td></tr>
+          <tr><td class="pl">marynarka</td><td class="ru">пиджак</td></tr>
+          <tr><td class="pl">spodnie</td><td class="ru">брюки</td></tr>
+          <tr><td class="pl">bluzka</td><td class="ru">блузка</td></tr>
+          <tr><td class="pl">sukienka</td><td class="ru">платье</td></tr>
+          <tr><td class="pl">spódnica</td><td class="ru">юбка</td></tr>
+          <tr><td class="pl">sweter</td><td class="ru">свитер</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>A — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">płaszcz</td><td class="ru">пальто</td></tr>
+          <tr><td class="pl">kurtka</td><td class="ru">куртка</td></tr>
+          <tr><td class="pl">but</td><td class="ru">ботинок, обувь</td></tr>
+          <tr><td class="pl">rajstopy</td><td class="ru">колготки</td></tr>
+          <tr><td class="pl">skarpeta</td><td class="ru">носок</td></tr>
+          <tr><td class="pl">pas</td><td class="ru">пояс</td></tr>
+          <tr><td class="pl">miara</td><td class="ru">мерка</td></tr>
+          <tr><td class="pl">paski</td><td class="ru">полоски</td></tr>
+          <tr><td class="pl">wzór</td><td class="ru">узор</td></tr>
+          <tr><td class="pl">kropka</td><td class="ru">горошек, точка</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>A — Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">ciepły</td><td class="ru">тёплый</td></tr>
+          <tr><td class="pl">lekki</td><td class="ru">лёгкий</td></tr>
+          <tr><td class="pl">gruby</td><td class="ru">толстый</td></tr>
+          <tr><td class="pl">kolorowy</td><td class="ru">цветной</td></tr>
+          <tr><td class="pl">za duży</td><td class="ru">слишком большой</td></tr>
+          <tr><td class="pl">za mały</td><td class="ru">слишком маленький</td></tr>
+          <tr><td class="pl">za wąski</td><td class="ru">слишком узкий</td></tr>
+          <tr><td class="pl">za szeroki</td><td class="ru">слишком широкий</td></tr>
+          <tr><td class="pl">za gruby</td><td class="ru">слишком толстый</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>A — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">ubrać się</td><td class="ru">одеться</td></tr>
+          <tr><td class="pl">nosić</td><td class="ru">носить</td></tr>
+          <tr><td class="pl">rozbierać</td><td class="ru">раздевать</td></tr>
+          <tr><td class="pl">mierzyć</td><td class="ru">мерить</td></tr>
+          <tr><td class="pl">kroić</td><td class="ru">кроить</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">garderoba</td><td class="ru">гардероб</td></tr>
+          <tr><td class="pl">strój</td><td class="ru">наряд, костюм</td></tr>
+          <tr><td class="pl">beret</td><td class="ru">берет</td></tr>
+          <tr><td class="pl">nakrycie głowy</td><td class="ru">головной убор</td></tr>
+          <tr><td class="pl">kapelusz</td><td class="ru">шляпа</td></tr>
+          <tr><td class="pl">szalik</td><td class="ru">шарф</td></tr>
+          <tr><td class="pl">chustka</td><td class="ru">платок</td></tr>
+          <tr><td class="pl">kaszkiet</td><td class="ru">кепка</td></tr>
+          <tr><td class="pl">bielizna</td><td class="ru">бельё</td></tr>
+          <tr><td class="pl">podkoszulek</td><td class="ru">майка, футболка</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>B — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">kalesony</td><td class="ru">трусы (муж.)</td></tr>
+          <tr><td class="pl">kamizelka</td><td class="ru">жилет</td></tr>
+          <tr><td class="pl">garnitur</td><td class="ru">костюм</td></tr>
+          <tr><td class="pl">suknia</td><td class="ru">платье (нарядное)</td></tr>
+          <tr><td class="pl">kostium</td><td class="ru">костюм</td></tr>
+          <tr><td class="pl">palto</td><td class="ru">пальто</td></tr>
+          <tr><td class="pl">kożuch</td><td class="ru">шуба, дубленка</td></tr>
+          <tr><td class="pl">peleryna</td><td class="ru">накидка, плащ</td></tr>
+          <tr><td class="pl">pantofle</td><td class="ru">тапочки</td></tr>
+          <tr><td class="pl">pończochy</td><td class="ru">чулки</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>B — Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">rękawice</td><td class="ru">перчатки</td></tr>
+          <tr><td class="pl">stanik</td><td class="ru">лифчик</td></tr>
+          <tr><td class="pl">kostium kąpielowy</td><td class="ru">купальник</td></tr>
+          <tr><td class="pl">rozmiar</td><td class="ru">размер</td></tr>
+          <tr><td class="pl">ciuch</td><td class="ru">одёжка, тряпка (разг.)</td></tr>
+          <tr><td class="pl">ozdoba</td><td class="ru">украшение</td></tr>
+          <tr><td class="pl">kropki</td><td class="ru">горошек</td></tr>
+          <tr><td class="pl">desień</td><td class="ru">узор, рисунок</td></tr>
+          <tr><td class="pl">fałdy</td><td class="ru">складки</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>B — Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">wełniany</td><td class="ru">шерстяной</td></tr>
+          <tr><td class="pl">elegancki</td><td class="ru">элегантный</td></tr>
+          <tr><td class="pl">dopasowany</td><td class="ru">облегающий, подходящий</td></tr>
+          <tr><td class="pl">ozdobny</td><td class="ru">декоративный</td></tr>
+          <tr><td class="pl">gładki</td><td class="ru">гладкий</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>B — Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">pasować</td><td class="ru">подходить, быть впору</td></tr>
+          <tr><td class="pl">dopasowywać</td><td class="ru">подгонять, подбирать</td></tr>
+          <tr><td class="pl">stroić się</td><td class="ru">наряжаться</td></tr>
+          <tr><td class="pl">ozdabiać</td><td class="ru">украшать</td></tr>
+          <tr><td class="pl">dobierać</td><td class="ru">подбирать</td></tr>
+          <tr><td class="pl">fastrygować</td><td class="ru">подшивать, подгонять</td></tr>
+          <tr><td class="pl">szyć</td><td class="ru">шить</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+  <section class="theme">
+    <div class="theme-head">
+      <h2><span>Kolory <span class="ru">— Цвета</span></span></h2>
+    </div>
+    <div class="cols">
+
+    <div class="col">
+      <div class="block">
+        <h3>Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">biały</td><td class="ru">белый</td></tr>
+          <tr><td class="pl">żółty</td><td class="ru">жёлтый</td></tr>
+          <tr><td class="pl">cytrynowy</td><td class="ru">лимонный</td></tr>
+          <tr><td class="pl">pomarańczowy</td><td class="ru">оранжевый</td></tr>
+          <tr><td class="pl">różowy</td><td class="ru">розовый</td></tr>
+          <tr><td class="pl">czerwony</td><td class="ru">красный</td></tr>
+          <tr><td class="pl">niebieski</td><td class="ru">синий</td></tr>
+          <tr><td class="pl">granatowy</td><td class="ru">тёмно-синий</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">seledynowy</td><td class="ru">салатовый, цвет морской волны</td></tr>
+          <tr><td class="pl">zielony</td><td class="ru">зелёный</td></tr>
+          <tr><td class="pl">beżowy</td><td class="ru">бежевый</td></tr>
+          <tr><td class="pl">kremowy</td><td class="ru">кремовый</td></tr>
+          <tr><td class="pl">brązowy</td><td class="ru">коричневый</td></tr>
+          <tr><td class="pl">liliowy</td><td class="ru">сиреневый, лиловый</td></tr>
+          <tr><td class="pl">szary</td><td class="ru">серый</td></tr>
+          <tr><td class="pl">czarny</td><td class="ru">чёрный</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">pastelowy</td><td class="ru">пастельный</td></tr>
+          <tr><td class="pl">jasny</td><td class="ru">светлый</td></tr>
+          <tr><td class="pl">ciemny</td><td class="ru">тёмный</td></tr>
+          <tr><td class="pl">blady</td><td class="ru">бледный</td></tr>
+          <tr><td class="pl">mocny</td><td class="ru">насыщенный, яркий</td></tr>
+          <tr><td class="pl">tęczowy</td><td class="ru">радужный, разноцветный</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">barwić</td><td class="ru">окрашивать, красить</td></tr>
+          <tr><td class="pl">kolorować</td><td class="ru">раскрашивать</td></tr>
+          <tr><td class="pl">cieniować</td><td class="ru">затенять</td></tr>
+          <tr><td class="pl">malować</td><td class="ru">рисовать, красить</td></tr>
+          <tr><td class="pl">farbować</td><td class="ru">красить, окрашивать</td></tr>
+          <tr><td class="pl">mienić się kolorami</td><td class="ru">переливаться красками</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>Вопросы и ответы</h3>
+        <table><tbody>
+          <tr><td class="pl">Jaki to kolor?</td><td class="ru">Какой это цвет?</td></tr>
+          <tr><td class="pl">To jest kolor czerwony.</td><td class="ru">Это красный цвет.</td></tr>
+          <tr><td class="pl">Jaka jest róża?</td><td class="ru">Какая роза?</td></tr>
+          <tr><td class="pl">Róża jest czerwona.</td><td class="ru">Роза красная.</td></tr>
+          <tr><td class="pl">Jakiego koloru jest róża?</td><td class="ru">Какого цвета роза?</td></tr>
+          <tr><td class="pl">Róża jest czerwonego koloru.</td><td class="ru">Роза красного цвета.</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+  <section class="theme">
+    <div class="theme-head">
+      <h2><span>Kształty <span class="ru">— Формы и фигуры</span></span></h2>
+    </div>
+    <div class="cols">
+
+    <div class="col">
+      <div class="block">
+        <h3>Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">kula</td><td class="ru">шар, сфера</td></tr>
+          <tr><td class="pl">kwadrat</td><td class="ru">квадрат</td></tr>
+          <tr><td class="pl">owal</td><td class="ru">овал</td></tr>
+          <tr><td class="pl">prostokąt</td><td class="ru">прямоугольник</td></tr>
+          <tr><td class="pl">trójkąt</td><td class="ru">треугольник</td></tr>
+          <tr><td class="pl">stożek</td><td class="ru">конус</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>Существительные</h3>
+        <table><tbody>
+          <tr><td class="pl">spirala</td><td class="ru">спираль</td></tr>
+          <tr><td class="pl">krzywizna</td><td class="ru">кривизна</td></tr>
+          <tr><td class="pl">prosta</td><td class="ru">прямая (линия)</td></tr>
+          <tr><td class="pl">słup</td><td class="ru">столб, цилиндр</td></tr>
+          <tr><td class="pl">wgłębienie</td><td class="ru">углубление, впадина</td></tr>
+          <tr><td class="pl">wypukłość</td><td class="ru">выпуклость</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">kulisty</td><td class="ru">шарообразный</td></tr>
+          <tr><td class="pl">okrągły</td><td class="ru">круглый</td></tr>
+          <tr><td class="pl">kwadratowy</td><td class="ru">квадратный</td></tr>
+          <tr><td class="pl">owalny</td><td class="ru">овальный</td></tr>
+          <tr><td class="pl">obły</td><td class="ru">округлый, обтекаемый</td></tr>
+          <tr><td class="pl">prostokątny</td><td class="ru">прямоугольный</td></tr>
+          <tr><td class="pl">trójkątny</td><td class="ru">треугольный</td></tr>
+          <tr><td class="pl">stożkowy</td><td class="ru">конический</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>Прилагательные</h3>
+        <table><tbody>
+          <tr><td class="pl">spiralny</td><td class="ru">спиральный</td></tr>
+          <tr><td class="pl">krzywy</td><td class="ru">кривой</td></tr>
+          <tr><td class="pl">nieregularny</td><td class="ru">неправильный</td></tr>
+          <tr><td class="pl">bezkształtny</td><td class="ru">бесформенный</td></tr>
+          <tr><td class="pl">prosty</td><td class="ru">прямой</td></tr>
+          <tr><td class="pl">wklęsły</td><td class="ru">вогнутый</td></tr>
+          <tr><td class="pl">wypukły</td><td class="ru">выпуклый</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="block">
+        <h3>Глаголы</h3>
+        <table><tbody>
+          <tr><td class="pl">kształtować</td><td class="ru">формировать, придавать форму</td></tr>
+          <tr><td class="pl">modelować</td><td class="ru">лепить, моделировать</td></tr>
+          <tr><td class="pl">rzeźbić</td><td class="ru">вырезать, скульптурить</td></tr>
+        </tbody></table>
+      </div>
+      <div class="block">
+        <h3>Вопросы и ответы</h3>
+        <table><tbody>
+          <tr><td class="pl">Jakie to jest?</td><td class="ru">Какое это (по форме)?</td></tr>
+          <tr><td class="pl">To jest okrągłe.</td><td class="ru">Это круглое.</td></tr>
+          <tr><td class="pl">Jaki to ma kształt?</td><td class="ru">Какую форму это имеет?</td></tr>
+          <tr><td class="pl">To ma kształt koła.</td><td class="ru">Это имеет форму круга.</td></tr>
+          <tr><td class="pl">Jakiego to jest kształtu?</td><td class="ru">Какой формы это?</td></tr>
+          <tr><td class="pl">To jest okrągłego (kulistego) kształtu.</td><td class="ru">Это круглой (шарообразной) формы.</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+</div>
+</body>
+</html>
